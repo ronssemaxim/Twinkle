@@ -2,7 +2,7 @@
 	<td {$style}>
 		<label for="{$fieldname}">{$label}{$mandatory}:
 		<if $desc != ''>
-			<br /><span style="font-size:85%;">{$desc}</span>
+			<p><small>{$desc}</small></p>
 		</if>
 		</label>
 	</td>

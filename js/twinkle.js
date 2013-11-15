@@ -1,9 +1,17 @@
-jQuery.fn.reverse = function() {
-	return this.pushStack(this.get().reverse(), arguments);
-};
+/*
+** Twinkle Theme
+**
+** 2013 Ingo Eberhardt ingo@twinlabs.de
+** 
+** https://github.com/oschn0r/Twinkle
+**
+*/
 
 $( document ).ready(function() {
 
+	/*
+	** Theme Informations
+	*/
 	var defaultFroxlorTheme = $('#theme').val();
 	loadThemeDescription(defaultFroxlorTheme);
 
@@ -17,7 +25,7 @@ $( document ).ready(function() {
 
 		themeTable.html('');
 
-		if(typeof themeDescriptions[theme] === 'undefined') {
+		if(typeof themeDescriptions === 'undefined') {
 			themeTable.append('<tr><td>&nbsp;</td><td>No Information about selected Theme.</td></tr>');
 		} else {
 
@@ -35,6 +43,9 @@ $( document ).ready(function() {
 		}
 	}
 
+	/*
+	** Dashboard
+	*/
 	if(typeof dashboard === 'undefined') {
 		//console.log("no dashboard");
 	} else 
@@ -136,12 +147,18 @@ $( document ).ready(function() {
 											 .css('line-height', '17px');
 	}
 
-	// NO Button
+
+	/*
+	** Back Button in information panels
+	*/
 	$('#yesnobutton').click(function() {
 		history.back();
 	});
 
-	// Auto-select next field in configfile - wizard
+
+	/*
+	** Auto-select next field in configfile - wizard
+	*/
 	$('#config_distribution').change(function (){
 		window.location.href=window.location.href + '&distribution=' + this.options[ this.selectedIndex ].value;
 	});
@@ -152,6 +169,10 @@ $( document ).ready(function() {
 		window.location.href=window.location.href + '&daemon=' + this.options[ this.selectedIndex ].value;
 	});
 
+	/*
+	** Special Logfile YesNoSure Dialog
+	*/
+	
 	// this is necessary for the special setting feature (ref #1010)
 	$.getQueryVariable = function(key) {
 		var urlParams = decodeURI( window.location.search.substring(1) );
@@ -199,11 +220,13 @@ $( document ).ready(function() {
 		}
     });
 
+    /*
+    ** Styles all tables in Add/Edit/Settings tables
+    */
 	$('#domain_add, #domain_edit, #customer_add, #customer_edit, #admin_add, #admin_edit, #ipsandports_add, #ipsandports_edit, #ticket_new, #category_new, #category_edit, #cron_edit, #email_edit, forwarder_add').find('[type=text], [type=password], select, textarea').addClass('form-control').wrap('<div class="col-xs-9"></div>')
 	$('#domain_add, #domain_edit, #customer_add, #customer_edit, #admin_add, #admin_edit, #ipsandports_add, #ipsandports_edit, #ticket_new, #category_new, #category_edit, #cron_edit, #email_edit, forwarder_add').find('[type=checkbox]').parent().wrap('<div class="col-xs-12"></div>');
 	$('#domain_add, #domain_edit, #customer_add, #customer_edit, #admin_add, #admin_edit, #ipsandports_add, #ipsandports_edit, #ticket_new, #category_new, #category_edit, #cron_edit, #email_edit, forwarder_add').find('th').wrapInner('<h3></h3>');
 
-	//console.log($('#email_part').parent().text());
 	$('#subdomain_add, #subdomain_edit').find('#path, #alias, #redirectcode, #openbasedir_path, #selectserveralias').addClass('form-control').wrap('<div class="col-xs-9"></div>')
 	$('#email_part, #subdomain').addClass('form-control').wrap('<div class="col-xs-12 col-sm-5 col-md-6 col-lg-6"></div>');
 	$('#domain').addClass('form-control').wrap('<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 pull-right"></div>');
@@ -213,9 +236,173 @@ $( document ).ready(function() {
 	$('#settings_overview').find('th').wrapInner('<h3></h3>');
 
 	/*
-	** Tablesorter
+	** Customer Hosting Packages Selector
 	*/
+	var serviceButton = '<div class="btn-group">';
+		serviceButton += '<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">';
+	    serviceButton += 'Choose Hosting Package <span class="caret"></span>';
+		serviceButton += '</button>';
+		serviceButton += '<ul class="dropdown-menu" role="menu">';
+		serviceButton += '<li class="disabled"><a href="#">Package (Webspace/Traffic/Rest)</a></li>';
+		serviceButton += '<li><a href="#" id="small">Small (500MB/5GB/50)</a></li>';
+		serviceButton += '<li><a href="#" id="medium">Medium (5000MB/50GB/150)</a></li>';
+		serviceButton += '<li><a href="#" id="large">Large (10000MB/100GB/350)</a></li>';
+		serviceButton += '<li><a href="#" id="unlimited">Unlimited</a></li>';
+		//serviceButton += '<li class="divider"></li>';
+		//serviceButton += '<li><a href="#" id="configure">Configure</a></li>';
+		serviceButton += '</ul>';
+		serviceButton += '</div>';
 
+	$('#servicedata h3').prepend(serviceButton);
+
+	$('#small, #medium, #large, #unlimited, #configure').on('click', function(event) {
+		event.preventDefault();
+
+		var selectedPackage = $(this).attr('id');
+
+		switch(selectedPackage) {
+			case 'small' : 
+							$('#diskspace').val('500');
+							$('[name=diskspace_ul]').attr("checked", false);
+
+							$('#traffic').val('5');
+							$('[name=traffic_ul]').attr("checked", false);
+
+							$('#subdomains').val('50');
+							$('[name=subdomains_ul]').attr("checked", false);
+
+							$('#emails').val('50');
+							$('[name=emails_ul]').attr("checked", false);
+
+							$('#email_accounts').val('50');
+							$('[name=email_accounts_ul]').attr("checked", false);
+
+							$('#email_forwarders').val('50');
+							$('[name=email_forwarders_ul]').attr("checked", false);
+
+							$('#email_quota').val('50');
+							$('[name=email_quota_ul]').attr("checked", false);
+
+							$('#email_autoresponder').val('50');
+							$('[name=email_autoresponder_ul]').attr("checked", false);
+
+							$('#ftps').val('50');
+							$('[name=ftps_ul]').attr("checked", false);
+
+							$('#tickets').val('50');
+							$('[name=tickets_ul]').attr("checked", false);
+
+							$('#mysqls').val('50');
+							$('[name=mysqls_ul]').attr("checked", false);
+							break;
+			case 'medium' : 
+							$('#diskspace').val('5000');
+							$('[name=diskspace_ul]').attr("checked", false);
+
+							$('#traffic').val('50');
+							$('[name=traffic_ul]').attr("checked", false);
+
+							$('#subdomains').val('150');
+							$('[name=subdomains_ul]').attr("checked", false);
+
+							$('#emails').val('150');
+							$('[name=emails_ul]').attr("checked", false);
+
+							$('#email_accounts').val('150');
+							$('[name=email_accounts_ul]').attr("checked", false);
+
+							$('#email_forwarders').val('150');
+							$('[name=email_forwarders_ul]').attr("checked", false);
+
+							$('#email_quota').val('150');
+							$('[name=email_quota_ul]').attr("checked", false);
+
+							$('#email_autoresponder').val('150');
+							$('[name=email_autoresponder_ul]').attr("checked", false);
+
+							$('#ftps').val('150');
+							$('[name=ftps_ul]').attr("checked", false);
+
+							$('#tickets').val('150');
+							$('[name=tickets_ul]').attr("checked", false);
+
+							$('#mysqls').val('150');
+							$('[name=mysqls_ul]').attr("checked", false);
+							break;
+			case 'large' : 
+							$('#diskspace').val('10000');
+							$('[name=diskspace_ul]').attr("checked", false);
+
+							$('#traffic').val('100');
+							$('[name=traffic_ul]').attr("checked", false);
+
+							$('#subdomains').val('300');
+							$('[name=subdomains_ul]').attr("checked", false);
+
+							$('#emails').val('300');
+							$('[name=emails_ul]').attr("checked", false);
+
+							$('#email_accounts').val('300');
+							$('[name=email_accounts_ul]').attr("checked", false);
+
+							$('#email_forwarders').val('300');
+							$('[name=email_forwarders_ul]').attr("checked", false);
+
+							$('#email_quota').val('300');
+							$('[name=email_quota_ul]').attr("checked", false);
+
+							$('#email_autoresponder').val('300');
+							$('[name=email_autoresponder_ul]').attr("checked", false);
+
+							$('#ftps').val('300');
+							$('[name=ftps_ul]').attr("checked", false);
+
+							$('#tickets').val('300');
+							$('[name=tickets_ul]').attr("checked", false);
+
+							$('#mysqls').val('300');
+							$('[name=mysqls_ul]').attr("checked", false);
+							break;
+			case 'unlimited' : 
+							$('#diskspace').val('0');
+							$('[name=diskspace_ul]').attr("checked", true);
+
+							$('#traffic').val('0');
+							$('[name=traffic_ul]').attr("checked", true);
+
+							$('#subdomains').val('0');
+							$('[name=subdomains_ul]').attr("checked", true);
+
+							$('#emails').val('0');
+							$('[name=emails_ul]').attr("checked", true);
+
+							$('#email_accounts').val('0');
+							$('[name=email_accounts_ul]').attr("checked", true);
+
+							$('#email_forwarders').val('0');
+							$('[name=email_forwarders_ul]').attr("checked", true);
+
+							$('#email_quota').val('0');
+							$('[name=email_quota_ul]').attr("checked", true);
+
+							$('#email_autoresponder').val('0');
+							$('[name=email_autoresponder_ul]').attr("checked", true);
+
+							$('#ftps').val('0');
+							$('[name=ftps_ul]').attr("checked", true);
+
+							$('#tickets').val('0');
+							$('[name=tickets_ul]').attr("checked", true);
+
+							$('#mysqls').val('0');
+							$('[name=mysqls_ul]').attr("checked", true);
+							break;
+		}
+	});
+
+	/*
+	** Traffic diagram and table
+	*/
 	$.tablesorter.addParser( {
 								id: 'filesize',
 								is: function(s) {
@@ -373,3 +560,7 @@ $( document ).ready(function() {
 		}
 	}
 });
+
+jQuery.fn.reverse = function() {
+	return this.pushStack(this.get().reverse(), arguments);
+};
