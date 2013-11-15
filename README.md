@@ -3,6 +3,8 @@ Twinkle
 
 Twinkle is a bootstrapped [Froxlor](http://www.froxlor.org/) Theme for mobile and desktop devices.
 
+Tested with Froxlor 0.9.31
+
 Responsive
 ----------
 
