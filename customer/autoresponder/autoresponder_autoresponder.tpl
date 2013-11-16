@@ -6,11 +6,11 @@
 	</td>
 	<td>$activated_date</td>
 	<td>
-		<a href="{$linker->getLink(array('section' => 'autoresponder', 'action' => 'edit', 'email' => $row['email']))}" style="text-decoration:none;">
-			<img src="templates/{$theme}/assets/img/icons/edit.png" alt="{$lng['panel']['edit']}" />
+		<a href="{$linker->getLink(array('section' => 'autoresponder', 'action' => 'edit', 'email' => $row['email']))}" title="{$lng['panel']['edit']}">
+			<span class="icon-pencil"></span>
 		</a>&nbsp;
-		<a href="{$linker->getLink(array('section' => 'autoresponder', 'action' => 'delete', 'email' => $row['email']))}" style="text-decoration:none;">
-			<img src="templates/{$theme}/assets/img/icons/delete.png" alt="{$lng['panel']['delete']}" />
+		<a href="{$linker->getLink(array('section' => 'autoresponder', 'action' => 'delete', 'email' => $row['email']))}" title="{$lng['panel']['delete']}">
+			<span class="icon-remove"></span>
 		</a>
 	</td>
 </tr>
