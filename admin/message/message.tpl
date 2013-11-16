@@ -19,7 +19,11 @@ $header
 				</if>
 
 				<form action="$filename" method="post" enctype="application/x-www-form-urlencoded">
-					<table class="table table-responsive">
+					<table class="table table-responsive" id="message_send">
+						<colgroup>
+							<col class="col-xs-4 col-sm-6 col-md-4 col-lg-4">
+							<col class="col-xs-8 col-sm-6 col-md-8 col-lg-8">
+						</colgroup>
 						<tr>
 							<td><label for="receipient">{$lng['admin']['receipient']}</label></td>
 							<td><select class="form-control" name="receipient" id="receipient">$receipients</select></td>

@@ -14,7 +14,7 @@ $( document ).ready(function() {
 	*/
 	smoothScrollDown();
 	$(window).on('resize', function() {
-		smoothScrollDown();
+		//smoothScrollDown();
 	});
 
 	function smoothScrollDown() {
@@ -244,9 +244,9 @@ $( document ).ready(function() {
     /*
     ** Styles all tables in Add/Edit/Settings tables
     */
-	$('#domain_add, #domain_edit, #customer_add, #customer_edit, #admin_add, #admin_edit, #ipsandports_add, #ipsandports_edit, #ticket_new, #category_new, #category_edit, #cron_edit, #email_edit, #forwarder_add, #autoresponder_add, #autoresponder_edit, #mysql_add, #mysql_edit, #htaccess_add, #htaccess_edit, #htpassword_add, #htpassword_edit, #ftp_add, #ftp_edit').find('[type=text], [type=password], select, textarea').addClass('form-control').wrap('<div class="col-xs-9"></div>')
-	$('#domain_add, #domain_edit, #customer_add, #customer_edit, #admin_add, #admin_edit, #ipsandports_add, #ipsandports_edit, #ticket_new, #category_new, #category_edit, #cron_edit, #email_edit, #forwarder_add, #autoresponder_add, #autoresponder_edit, #mysql_add, #mysql_edit, #htaccess_add, #htaccess_edit, #htpassword_add, #htpassword_edit, #ftp_add, #ftp_edit').find('[type=checkbox]').parent().wrap('<div class="col-xs-12"></div>');
-	$('#domain_add, #domain_edit, #customer_add, #customer_edit, #admin_add, #admin_edit, #ipsandports_add, #ipsandports_edit, #ticket_new, #category_new, #category_edit, #cron_edit, #email_edit, #forwarder_add, #autoresponder_add, #autoresponder_edit, #mysql_add, #mysql_edit, #htaccess_add, #htaccess_edit, #htpassword_add, #htpassword_edit, #ftp_add, #ftp_edit').find('th').wrapInner('<h3></h3>');
+	$('#domain_add, #domain_edit, #customer_add, #customer_edit, #admin_add, #admin_edit, #ipsandports_add, #ipsandports_edit, #ticket_new, #category_new, #category_edit, #cron_edit, #email_edit, #forwarder_add, #autoresponder_add, #autoresponder_edit, #mysql_add, #mysql_edit, #htaccess_add, #htaccess_edit, #htpassword_add, #htpassword_edit, #ftp_add, #ftp_edit, #message_send').find('[type=text], [type=password], select, textarea').addClass('form-control').wrap('<div class="col-xs-9"></div>')
+	$('#domain_add, #domain_edit, #customer_add, #customer_edit, #admin_add, #admin_edit, #ipsandports_add, #ipsandports_edit, #ticket_new, #category_new, #category_edit, #cron_edit, #email_edit, #forwarder_add, #autoresponder_add, #autoresponder_edit, #mysql_add, #mysql_edit, #htaccess_add, #htaccess_edit, #htpassword_add, #htpassword_edit, #ftp_add, #ftp_edit, #message_send').find('[type=checkbox]').parent().wrap('<div class="col-xs-12"></div>');
+	$('#domain_add, #domain_edit, #customer_add, #customer_edit, #admin_add, #admin_edit, #ipsandports_add, #ipsandports_edit, #ticket_new, #category_new, #category_edit, #cron_edit, #email_edit, #forwarder_add, #autoresponder_add, #autoresponder_edit, #mysql_add, #mysql_edit, #htaccess_add, #htaccess_edit, #htpassword_add, #htpassword_edit, #ftp_add, #ftp_edit, #message_send').find('th').wrapInner('<h3></h3>');
 
 	$('#subdomain_add, #subdomain_edit').find('#path, #alias, #redirectcode, #openbasedir_path, #selectserveralias').addClass('form-control').wrap('<div class="col-xs-9"></div>')
 	$('#email_part, #subdomain').addClass('form-control').wrap('<div class="col-xs-12 col-sm-5 col-md-6 col-lg-6"></div>');
