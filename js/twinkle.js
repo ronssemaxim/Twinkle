@@ -259,6 +259,11 @@ $( document ).ready(function() {
 	// Login Name must be <12 chars
 	$('#new_loginname').attr("maxlength", 12);
 
+	$('#pagination').find("td").wrapInner('<ul class="pagination"></ul>');
+	//$('#pagination').find("td").children().html().replace(/&nbsp;/g, ' ')
+	$('#pagination').find("strong").wrap('<a href="#"></a>');
+	$('#pagination').find("a").wrap('<li></li>');
+
 	/*
 	** Customer Hosting Packages Selector
 	*/

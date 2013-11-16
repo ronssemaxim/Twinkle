@@ -44,7 +44,7 @@ $header
 						$ipsandports
 					</tbody>
 					<if $pagingcode != ''>
-						<tfoot>
+						<tfoot id="pagination">
 							<tr>
 								<td colspan="8">{$pagingcode}</td>
 							</tr>

@@ -60,7 +60,7 @@ $header
 					</tbody>
 			
 					<if $pagingcode != ''>
-						<tfoot>
+						<tfoot id="pagination">
 							<tr>
 								<td colspan="6">{$pagingcode}</td>
 							</tr>

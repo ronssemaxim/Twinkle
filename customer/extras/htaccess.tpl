@@ -41,16 +41,16 @@ $header
 							<th>{$lng['panel']['options']}</th>
 						</tr>
 					</thead>
+					<tbody>
+						{$htaccess}
+					</tbody>
 					<if $pagingcode != ''>
-						<tfoot>
+						<tfoot id="pagination">
 							<tr>
 								<td colspan="7">{$pagingcode}</td>
 							</tr>
 						</tfoot>
 					</if>
-					<tbody>
-						{$htaccess}
-					</tbody>
 				</table>
 			</div>
 		</div>

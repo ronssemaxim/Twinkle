@@ -39,16 +39,16 @@ $header
 							<th>{$lng['panel']['options']}</th>
 						</tr>
 					</thead>
+					<tbody>
+						{$mysqls}
+					</tbody>
 					<if $pagingcode != ''>
-						<tfoot>
+						<tfoot id="pagination">
 							<tr>
 								<td colspan="5">{$pagingcode}</td>
 							</tr>
 						</tfoot>
 					</if>
-					<tbody>
-						{$mysqls}
-					</tbody>
 				</table>
 			</div>
 		</div>

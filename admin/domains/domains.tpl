@@ -44,7 +44,7 @@ $header
 					</tbody>
 					
 					<if $pagingcode != ''>
-						<tfoot>
+						<tfoot id="pagination">
 							<tr>
 								<td colspan="4">{$pagingcode}</td>
 							</tr>

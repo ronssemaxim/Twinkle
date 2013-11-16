@@ -35,16 +35,16 @@ $header
 							<th>{$lng['panel']['options']}</th>
 						</tr>
 					</thead>
+					<tbody>
+						{$htpasswds}
+					</tbody>
 					<if $pagingcode != ''>
-						<tfoot>
+						<tfoot id="pagination">
 							<tr>
 								<td colspan="3">{$pagingcode}</td>
 							</tr>
 						</tfoot>
 					</if>
-					<tbody>
-						{$htpasswds}
-					</tbody>
 				</table>
 			</div>
 		</div>
