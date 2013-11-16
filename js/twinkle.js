@@ -12,15 +12,21 @@ $( document ).ready(function() {
 	/*
 	** Smooth Scrolldown
 	*/
+	smoothScrollDown();
+	$(window).on('resize', function() {
+		smoothScrollDown();
+	});
 
-	// only do smooth scrolling, when window width is XS
-	if($(window).width() < 768) {
-		var target = $('#articlehead');
+	function smoothScrollDown() {
+		// only do smooth scrolling, when window width is XS
+		if($(window).width() < 768) {
+			var target = $('#articlehead');
 
-		if (target.length) {
-			$('html,body').animate({ 
-				scrollTop: target.offset().top
-			}, 1000);
+			if (target.length) {
+				$('html,body').animate({ 
+					scrollTop: target.offset().top
+				}, 1000);
+			}
 		}
 	}
 
