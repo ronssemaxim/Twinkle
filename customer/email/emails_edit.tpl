@@ -13,6 +13,10 @@ $header
 			<div class="col-sm-12 col-md-12 col-lg-12">
 				<form action="{$linker->getLink(array('section' => 'email'))}" method="post" enctype="application/x-www-form-urlencoded">
 					<table class="table table-responsive" id="email_edit">
+						<colgroup>
+							<col class="col-xs-4">
+							<col class="col-xs-8">
+						</colgroup>
 						{$email_edit_form}
 						<tr>
 							<td class="maintitle" colspan="2">

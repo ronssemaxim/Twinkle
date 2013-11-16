@@ -12,8 +12,12 @@ $header
 			<div class="col-sm-12 col-md-12 col-lg-12">
 				<form method="post" action="{$linker->getLink(array('section' => 'index'))}" enctype="application/x-www-form-urlencoded">
 					<table class="table table-responsive">
+						<colgroup>
+							<col class="col-xs-4">
+							<col class="col-xs-8">
+						</colgroup>
 						<tr>
-							<td width="50%"><label for="old_password">{$lng['changepassword']['old_password']}:</label></td>
+							<td><label for="old_password">{$lng['changepassword']['old_password']}:</label></td>
 							<td><input type="password" class="form-control" id="old_password" name="old_password" /></td>
 						</tr>
 						<tr>

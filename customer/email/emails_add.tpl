@@ -19,6 +19,10 @@ $header
 				<else>
 					<form action="{$linker->getLink(array('section' => 'email'))}" method="post" enctype="application/x-www-form-urlencoded">		
 						<table class="table table-responsive" id="email_add">
+							<colgroup>
+								<col class="col-xs-4">
+								<col class="col-xs-8">
+							</colgroup>
 							{$email_add_form}
 						</table>
 

@@ -13,7 +13,11 @@ $header
 				<form method="post" action="{$linker->getLink(array('section' => 'index'))}" enctype="application/x-www-form-urlencoded">
 					<table class="table table-responsive">
 						<tr>
-							<td width="50%"><label for="def_language">{$lng['login']['language']}:</label></td>
+							<colgroup>
+								<col class="col-xs-4">
+								<col class="col-xs-8">
+							</colgroup>
+							<td><label for="def_language">{$lng['login']['language']}:</label></td>
 							<td><select id="def_language" name="def_language">$language_options</select></td>
 						</tr>
 						<tfoot>

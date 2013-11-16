@@ -13,6 +13,10 @@ $header
 			<div class="col-sm-12 col-md-12 col-lg-12">
 				<form action="{$linker->getLink(array('section' => 'ftp'))}" method="post" enctype="application/x-www-form-urlencoded">
 					<table class="table table-responsive">
+						<colgroup>
+							<col class="col-xs-4">
+							<col class="col-xs-8">
+						</colgroup>
 						{$ftp_edit_form}
 					</table>
 

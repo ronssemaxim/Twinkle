@@ -12,7 +12,11 @@ $header
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
 				<form action="{$linker->getLink(array('section' => 'autoresponder'))}" method="post" enctype="application/x-www-form-urlencoded">
-					<table class="table table-responsive">
+					<table class="table table-responsive" id="autoresponder_edit">
+						<colgroup>
+							<col class="col-xs-4">
+							<col class="col-xs-8">
+						</colgroup>
 						{$autoresponder_edit_form}
 					</table>
 

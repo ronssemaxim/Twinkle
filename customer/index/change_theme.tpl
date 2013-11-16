@@ -12,8 +12,12 @@ $header
 			<div class="col-sm-12 col-md-12 col-lg-12">
 				<form method="post" action="{$linker->getLink(array('section' => 'index'))}" enctype="application/x-www-form-urlencoded">
 					<table class="table table-responsive">
+						<colgroup>
+							<col class="col-xs-4">
+							<col class="col-xs-8">
+						</colgroup>
 						<tr>
-							<td width="50%"><label for="theme">{$lng['panel']['theme']}:</label></td>
+							<td><label for="theme">{$lng['panel']['theme']}:</label></td>
 							<td><select id="theme" name="theme">$theme_options</select></td>
 						</tr>
 						<tfoot>
