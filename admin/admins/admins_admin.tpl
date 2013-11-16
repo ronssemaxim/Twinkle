@@ -28,7 +28,7 @@
 						</div>
 					</if>
 				<else>
-					<div class="progress">∞
+					<div class="progress text-center">∞
 							<div class="bar" style="width: 0%"></div>
 					</div>
 				</if>
@@ -46,7 +46,7 @@
 						</div>
 					</if>
 				<else>
-					<div class="progress">∞
+					<div class="progress text-center">∞
 						<div class="bar" style="width: 0%"></div>
 					</div>
 				</if>

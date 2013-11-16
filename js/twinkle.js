@@ -256,6 +256,9 @@ $( document ).ready(function() {
 	$('#settings_overview').find('[type=checkbox]').css('margin-right', '5px').parent().wrap('<div class="col-xs-3"></div>');
 	$('#settings_overview').find('th').wrapInner('<h3></h3>');
 
+	// Login Name must be <12 chars
+	$('#new_loginname').attr("maxlength", 12);
+
 	/*
 	** Customer Hosting Packages Selector
 	*/
@@ -385,37 +388,37 @@ $( document ).ready(function() {
 							$('[name=mysqls_ul]').attr("checked", false);
 							break;
 			case 'unlimited' : 
-							$('#diskspace').val('0');
+							$('#diskspace').val('');
 							$('[name=diskspace_ul]').attr("checked", true);
 
-							$('#traffic').val('0');
+							$('#traffic').val('');
 							$('[name=traffic_ul]').attr("checked", true);
 
-							$('#subdomains').val('0');
+							$('#subdomains').val('');
 							$('[name=subdomains_ul]').attr("checked", true);
 
-							$('#emails').val('0');
+							$('#emails').val('');
 							$('[name=emails_ul]').attr("checked", true);
 
-							$('#email_accounts').val('0');
+							$('#email_accounts').val('');
 							$('[name=email_accounts_ul]').attr("checked", true);
 
-							$('#email_forwarders').val('0');
+							$('#email_forwarders').val('');
 							$('[name=email_forwarders_ul]').attr("checked", true);
 
-							$('#email_quota').val('0');
+							$('#email_quota').val('');
 							$('[name=email_quota_ul]').attr("checked", true);
 
-							$('#email_autoresponder').val('0');
+							$('#email_autoresponder').val('');
 							$('[name=email_autoresponder_ul]').attr("checked", true);
 
-							$('#ftps').val('0');
+							$('#ftps').val('');
 							$('[name=ftps_ul]').attr("checked", true);
 
-							$('#tickets').val('0');
+							$('#tickets').val('');
 							$('[name=tickets_ul]').attr("checked", true);
 
-							$('#mysqls').val('0');
+							$('#mysqls').val('');
 							$('[name=mysqls_ul]').attr("checked", true);
 							break;
 		}

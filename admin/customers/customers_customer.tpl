@@ -36,7 +36,7 @@
 						</div>
 					</if>
 				<else>
-					<div class="progress">∞
+					<div class="progress text-center">∞
 						<div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 60%;" title="unlimited"></div>
 					</div>
 				</if>
@@ -55,7 +55,7 @@
 						</div>
 					</if>
 				<else>
-					<div class="progress">∞
+					<div class="progress text-center">∞
 						<div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 60%;" title="unlimited"></div>
 					</div>
 				</if>
