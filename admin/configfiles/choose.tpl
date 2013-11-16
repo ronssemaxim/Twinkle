@@ -3,7 +3,7 @@ $header
 		<div class="row">
 			<header class="col-sm-12 col-md-12 col-lg-12">
 				<h2>
-					<span class="icon-cog"></span>&nbsp;
+					<a href="#" id="articlehead"></a><span class="icon-cog"></span>&nbsp;
 					{$lng['admin']['configfiles']['serverconfiguration']}&nbsp;
 					<small>
 						[<a href="{$linker->getLink(array('section' => 'configfiles', 'page' => 'configfiles'))}">{$lng['admin']['configfiles']['wizard']}</a>]

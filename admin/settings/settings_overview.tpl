@@ -2,7 +2,7 @@
 		<div class="row">
 			<header class="col-sm-12 col-md-12 col-lg-12">
 				<h2>
-					<span class="icon-cogs"></span>&nbsp;
+					<a href="#" id="articlehead"></a><span class="icon-cogs"></span>&nbsp;
 					{$lng['admin']['serversettings']}&nbsp;
 					<small>
 						[<a href="$filename?page=overview&amp;part=all&amp;s=$s">{$lng['admin']['configfiles']['overview']}

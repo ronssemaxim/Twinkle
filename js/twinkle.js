@@ -10,6 +10,21 @@
 $( document ).ready(function() {
 
 	/*
+	** Smooth Scrolldown
+	*/
+
+	// only do smooth scrolling, when window width is XS
+	if($(window).width() < 768) {
+		var target = $('#articlehead');
+
+		if (target.length) {
+			$('html,body').animate({ 
+				scrollTop: target.offset().top
+			}, 1000);
+		}
+	}
+
+	/*
 	** Theme Informations
 	*/
 	var defaultFroxlorTheme = $('#theme').val();

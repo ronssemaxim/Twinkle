@@ -3,7 +3,7 @@ $header
 		<div class="row">
 			<header class="col-sm-12 col-md-12 col-lg-12">
 				<h2>
-					<span class="icon-list3"></span>&nbsp;
+					<a href="#" id="articlehead"></a><span class="icon-list3"></span>&nbsp;
 					{$lng['menue']['logger']['logger']}
 				</h2>
 			</header>
