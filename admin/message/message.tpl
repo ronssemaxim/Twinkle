@@ -18,32 +18,33 @@ $header
 					</div>
 				</if>
 
-				<form action="$filename" method="post" enctype="application/x-www-form-urlencoded">
-					<table class="table table-responsive" id="message_send">
-						<colgroup>
-							<col class="col-xs-4 col-sm-6 col-md-4 col-lg-4">
-							<col class="col-xs-8 col-sm-6 col-md-8 col-lg-8">
-						</colgroup>
-						<tr>
-							<td><label for="receipient">{$lng['admin']['receipient']}</label></td>
-							<td><select class="form-control" name="receipient" id="receipient">$receipients</select></td>
-						</tr>
-						<tr>
-							<td><label for="subject">{$lng['admin']['subject']}</label></td>
-							<td><input class="form-control" type="text" name="subject" id="subject" value="{$lng['admin']['nosubject']}"/></td>
-						</tr>
-						<tr>
-							<td><label for="message">{$lng['admin']['text']}</label></td>
-							<td><textarea class="form-control" rows="12" name="message" id="message"></textarea></td>
-						</tr>
-						<tfoot>
-							<tr>
-								<td align="right" colspan="2">
-									<input type="submit" class="btn btn-default btn-success" value="{$lng['panel']['send']}" />
-								</td>
-							</tr>
-						</tfoot>
-					</table>
+				<form action="$filename" method="post" enctype="application/x-www-form-urlencoded" id="message_send" class="form-horizontal">
+					<div class="form-group">
+						<label for="receipient" class="control-label col-xs-12 col-sm-12 col-md-3 col-lg-3">{$lng['admin']['receipient']}</label>
+						<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+							<select class="form-control" name="receipient" id="receipient">$receipients</select>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="subject" class="control-label col-xs-12 col-sm-12 col-md-3 col-lg-3">{$lng['admin']['subject']}</label>
+						<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+							<input class="form-control" type="text" name="subject" id="subject" value="{$lng['admin']['nosubject']}"/>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="subject" class="control-label col-xs-12 col-sm-12 col-md-3 col-lg-3">{$lng['admin']['text']}</label>
+						<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+							<textarea class="form-control" rows="12" name="message" id="message"></textarea>
+						</div>
+					</div>
+					
+					<div class="col-md-offset-3 col-lg-offset-3">
+						<input type="submit" class="btn btn-default btn-success" value="{$lng['panel']['send']}" />
+					</div>
+					
+					
 
 					<input type="hidden" name="s" value="$s"/>
 					<input type="hidden" name="page" value="$page"/>

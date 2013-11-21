@@ -24,15 +24,14 @@ $header
 
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
-				<table class="table table-responsive">
 					{$configpage}
 					<if $restart != ''>
-						<tr>
-							<td>{$lng['admin']['configfiles']['restart']}<br /><br />
-							<textarea class="form-control" rows="3" cols="70" readonly="readonly">$restart</textarea></td>
-						</tr>
+						<div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<h4>{$lng['admin']['configfiles']['restart']}</h4>
+								<textarea class="form-control" rows="3" cols="70" readonly="readonly">$restart</textarea></td>
+							</h4>
+						</div>
 					</if>
-				</table>
 			</div>
 		</div>
 	</article>

@@ -11,14 +11,9 @@ $header
 
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
-				<form action="{$linker->getLink(array('section' => 'domains'))}" method="post" enctype="application/x-www-form-urlencoded">
-					<table class="table table-responsive" id="domain_edit">
-						<colgroup>
-							<col class="col-xs-4">
-							<col class="col-xs-8">
-						</colgroup>
-						{$domain_edit_form}
-					</table>
+				<form action="{$linker->getLink(array('section' => 'domains'))}" method="post" enctype="application/x-www-form-urlencoded" id="domain_edit" role="form" class="form-horizontal">
+					
+					{$domain_edit_form}
 
 					<input type="hidden" name="delete_statistics_str" id="delete_statistics_str" value="{$lng['admin']['delete_statistics']}">
 					<input type="hidden" name="speciallogverified" id="speciallogverified" value="0" />

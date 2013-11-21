@@ -11,10 +11,9 @@ $header
 
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
-				<form action="{$linker->getLink(array('section' => 'cronjobs'))}" method="post" enctype="application/x-www-form-urlencoded">				
-					<table class="table table-responsive" id="cron_edit">
-						{$cronjobs_edit_form}
-					</table>
+				<form action="{$linker->getLink(array('section' => 'cronjobs'))}" method="post" enctype="application/x-www-form-urlencoded" id="cron_edit" class="form-horizontal">			
+					
+					{$cronjobs_edit_form}
 
 					<input type="hidden" name="s" value="$s" />
 					<input type="hidden" name="page" value="$page" />

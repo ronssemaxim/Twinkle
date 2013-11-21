@@ -1,3 +1,12 @@
+/*
+** Twinkle Theme
+**
+** 2013 Ingo Eberhardt ingo@twinlabs.de
+** 
+** https://github.com/oschn0r/Twinkle
+**
+*/
+
 body {
   padding-top: 70px;
 }
@@ -30,6 +39,9 @@ section article header h3 {
   line-height: 17px;
   color: white;
 }
+.form-horizontal [type=checkbox] {
+  margin-right: 5px;
+}
 section article table thead [class*="icon-"] {
   font-size: 1.2em;
 }
@@ -41,9 +53,6 @@ section article table tbody td label {
 }
 section article table label {
   display: block;
-}
-section article table [type=checkbox] {
-  margin-right: 5px;
 }
 section article table a:hover {
   text-decoration: none;

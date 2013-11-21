@@ -14,15 +14,8 @@ $header
 
 
 		<div class="row">
-			<div class="col-sm-12 col-md-12 col-lg-12">				
-				<form action="{$linker->getLink(array('section' => 'configfiles'))}" method="get" enctype="application/x-www-form-urlencoded">
-					<table class="table table-responsive">
-						$distributions
-					</table>
-
-					<input type="hidden" name="s" value="$s" />
-					<input type="hidden" name="page" value="$page" />
-				</form>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">					
+				$distributions
 			</div>
 		</div>
 	</article>

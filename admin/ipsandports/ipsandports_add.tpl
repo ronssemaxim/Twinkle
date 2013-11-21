@@ -11,11 +11,10 @@ $header
 
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
-				<form action="{$linker->getLink(array('section' => 'ipsandports'))}" method="post" enctype="application/x-www-form-urlencoded">
-					<table class="table table-responsive" id="ipsandports_add">
-						{$ipsandports_add_form}
-					</table>
-
+				<form action="{$linker->getLink(array('section' => 'ipsandports'))}" method="post" enctype="application/x-www-form-urlencoded" id="ipsandports_add" class="form-horizontal">
+					
+					{$ipsandports_add_form}
+					
 					<input type="hidden" name="s" value="$s" />
 					<input type="hidden" name="page" value="$page" />
 					<input type="hidden" name="action" value="$action" />

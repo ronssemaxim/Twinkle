@@ -11,15 +11,8 @@ $header
 
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
-				<form action="{$linker->getLink(array('section' => 'customers'))}" method="post" enctype="application/x-www-form-urlencoded">
-
-					<table class="table table-responsive" id="customer_edit">
-						<colgroup>
-							<col class="col-xs-4">
-							<col class="col-xs-8">
-						</colgroup>
-						{$customer_edit_form}
-					</table>
+				<form action="{$linker->getLink(array('section' => 'customers'))}" method="post" enctype="application/x-www-form-urlencoded" id="customer_edit" class="form-horizontal">
+					{$customer_edit_form}
 
 					<input type="hidden" name="s" value="$s" />
 					<input type="hidden" name="page" value="$page" />

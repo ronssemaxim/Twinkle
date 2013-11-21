@@ -14,20 +14,15 @@
 		
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
-				<table class="table table-responsive">
-					<colgroup>
-						<col class="col-xs-6">
-						<col class="col-xs-6">
-					</colgroup>
-					$fields
-					<tfoot>
-						<tr>
-							<td colspan="2" style="text-align:right;">
-								<input type="submit" class="btn btn-primary" value="{$lng['panel']['save']}" />
-							</td>
-						</tr>
-					</tfoot>
-				</table>
+				$fields
+					
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 id="servicedata">&nbsp;
+						<input type="submit" class="btn btn-default btn-success pull-right" value="{$lng['panel']['save']}" />
+						</h3>
+					</div>
+				</div>
 			</div>
 		</div>
 	</article>
