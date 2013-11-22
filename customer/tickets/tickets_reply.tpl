@@ -15,11 +15,9 @@ $header
 
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
-				<form action="{$linker->getLink(array('section' => 'tickets'))}" method="post" enctype="application/x-www-form-urlencoded">
-					<if $isclosed < 1 >
-						<table class="table table-responsive">
-							{$ticket_reply_form}
-						</table>
+				<form action="{$linker->getLink(array('section' => 'tickets'))}" method="post" enctype="application/x-www-form-urlencoded" class="form-horizontal">
+					<if $isclosed < 1 >						
+						{$ticket_reply_form}						
 					</if>
 
 					<if 0 < $isclosed >

@@ -11,10 +11,8 @@ $header
 
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
-				<form action="{$linker->getLink(array('section' => 'email'))}" method="post" enctype="application/x-www-form-urlencoded">
-					<table class="table table-responsive" id="quota_edit">
-						{$quota_edit_form}
-					</table>
+				<form action="{$linker->getLink(array('section' => 'email'))}" method="post" enctype="application/x-www-form-urlencoded" id="quota_edit" class="form-horizontal">
+					{$quota_edit_form}
 
 					<input type="hidden" name="s" value="$s" />
 					<input type="hidden" name="page" value="$page" />

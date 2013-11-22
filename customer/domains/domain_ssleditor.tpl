@@ -12,12 +12,10 @@ $header
 	
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
-				<form action="{$linker->getLink(array('section' => 'domains'))}" method="post" enctype="application/x-www-form-urlencoded">
-					<table class="table table-responsive">
-						  {$ssleditor_form}
-					</table>
+				<form action="{$linker->getLink(array('section' => 'domains'))}" method="post" enctype="application/x-www-form-urlencoded" class="form-horizontal">
+					
+					{$ssleditor_form}
 
-	
 					<if $do_insert == 1>
 						<input type="hidden" name="do_insert" value="1" />
 					</if>

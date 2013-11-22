@@ -11,15 +11,9 @@ $header
 
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
-				<form action="{$linker->getLink(array('section' => 'domains'))}" method="post" enctype="application/x-www-form-urlencoded">
-					<table class="table table-responsive" id="subdomain_edit">
-						<colgroup>
-							<col class="col-xs-4">
-							<col class="col-xs-8">
-						</colgroup>
-						{$subdomain_edit_form}
-					</table>
-
+				<form action="{$linker->getLink(array('section' => 'domains'))}" method="post" enctype="application/x-www-form-urlencoded" id="subdomain_edit" class="form-horizontal">
+					{$subdomain_edit_form}
+					
 					<input type="hidden" name="s" value="$s" />
 					<input type="hidden" name="page" value="$page" />
 					<input type="hidden" name="action" value="$action" />

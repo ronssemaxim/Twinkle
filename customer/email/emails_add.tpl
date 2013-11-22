@@ -17,15 +17,9 @@ $header
         				<p>{$lng['emails']['noemaildomainaddedyet']}</p>
       				</div>
 				<else>
-					<form action="{$linker->getLink(array('section' => 'email'))}" method="post" enctype="application/x-www-form-urlencoded">		
-						<table class="table table-responsive" id="email_add">
-							<colgroup>
-								<col class="col-xs-4">
-								<col class="col-xs-8">
-							</colgroup>
-							{$email_add_form}
-						</table>
-
+					<form action="{$linker->getLink(array('section' => 'email'))}" method="post" enctype="application/x-www-form-urlencoded"  id="email_add" class="form-horizontal">
+						{$email_add_form}
+						
 						<input type="hidden" name="s" value="$s" />
 						<input type="hidden" name="page" value="$page" />
 						<input type="hidden" name="action" value="$action" />
