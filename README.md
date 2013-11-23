@@ -24,6 +24,12 @@ Just clone Twinkle directly to your Froxlor template folder. Then change theme i
     # cd /path/to/your/froxlor/templates
     # git clone https://github.com/oschn0r/Twinkle.git 
 
+Update
+------
+
+    # cd /path/to/your/froxlor/templates/Twinkle
+    # git pull
+
 LESS
 ----
 You'll find the Twinkle less file in /less.
