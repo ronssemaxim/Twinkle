@@ -1,3 +1,3 @@
-	<table class="table table-responsive">
+	<div class="panel panel-default">
 		{$phpinfoentries}
-	</table>
+	</div>
