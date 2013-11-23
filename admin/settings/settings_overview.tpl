@@ -13,31 +13,20 @@
 		</div>
 		
 		<div class="row">
-			<div class="col-sm-12 col-md-12 col-lg-12">
-				<table class="table table-responsive" id="settings_overview">
-					<colgroup>
-						<col class="col-xs-5">
-						<col class="col-xs-5">
-						<col class="col-xs-2">
-					</colgroup>
-					<thead>
-						<tr>
-							<th colspan="3" style="text-align:right;">
-								<input type="submit" class="btn btn-primary" value="{$lng['panel']['save']}" />
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-						$fields
-					</tbody>
-					<tfoot>
-						<tr>
-							<td colspan="3" style="text-align:right;">
-								<input type="submit" class="btn btn-primary" value="{$lng['panel']['save']}" />
-							</td>
-						</tr>
-					</tfoot>
-				</table>
+			<div class="col-sm-12 col-md-12 col-lg-12" id="settings_overview">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3>&nbsp;<input type="submit" class="btn btn-default btn-success pull-right" value="{$lng['panel']['save']}" /></h3>
+					</div>
+				</div>
+						
+				$fields
+				
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3>&nbsp;<input type="submit" class="btn btn-default btn-success pull-right" value="{$lng['panel']['save']}" /></h3>
+					</div>
+				</div>
 			</div>
 		</div>
 	</article>
