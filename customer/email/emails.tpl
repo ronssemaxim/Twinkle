@@ -29,31 +29,33 @@ $header
 			
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
-				<table class="table table-responsive">
-					<thead>
-						<tr>
-							<th>{$lng['emails']['emailaddress']}&nbsp;{$arrowcode['m.email_full']}</th>
-							<th>{$lng['emails']['forwarders']}&nbsp;{$arrowcode['m.destination']}</th>
-							<th>{$lng['emails']['account']}</th>
-							<if $settings['catchall']['catchall_enabled'] == '1'>
-								<th>{$lng['emails']['catchall']}</th></if>
-							<if $settings['system']['mail_quota_enabled'] == '1'>
-								<th>{$lng['emails']['quota']}</th>
-							</if>
-							<th>{$lng['panel']['options']}</th>
-						</tr>
-					</thead>
-					<tbody>
-						{$accounts}
-					</tbody>
-					<if $pagingcode != ''>
-						<tfoot id="pagination">
+				<div class="table-responsive">
+					<table class="table table">
+						<thead>
 							<tr>
-								<td colspan="6">{$pagingcode}</td>
+								<th>{$lng['emails']['emailaddress']}&nbsp;{$arrowcode['m.email_full']}</th>
+								<th>{$lng['emails']['forwarders']}&nbsp;{$arrowcode['m.destination']}</th>
+								<th>{$lng['emails']['account']}</th>
+								<if $settings['catchall']['catchall_enabled'] == '1'>
+									<th>{$lng['emails']['catchall']}</th></if>
+								<if $settings['system']['mail_quota_enabled'] == '1'>
+									<th>{$lng['emails']['quota']}</th>
+								</if>
+								<th>{$lng['panel']['options']}</th>
 							</tr>
-						</tfoot>
-					</if>
-				</table>
+						</thead>
+						<tbody>
+							{$accounts}
+						</tbody>
+						<if $pagingcode != ''>
+							<tfoot id="pagination">
+								<tr>
+									<td colspan="6">{$pagingcode}</td>
+								</tr>
+							</tfoot>
+						</if>
+					</table>
+				</div>
 			</div>
 		</div>
 

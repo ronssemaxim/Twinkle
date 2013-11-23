@@ -29,25 +29,27 @@ $header
 
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
-				<table class="table table-responsive">
-					<thead>
-						<tr>
-							<th>{$lng['login']['username']}&nbsp;{$arrowcode['username']}</th>
-							<th>{$lng['panel']['path']}&nbsp;{$arrowcode['homedir']}</th>
-							<th>{$lng['panel']['options']}</th>
-						</tr>
-					</thead>
-					<tbody>
-						{$accounts}
-					</tbody>
-					<if $pagingcode != ''>
-						<tfoot id="pagination">
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
 							<tr>
-								<td colspan="3">{$pagingcode}</td>
+								<th>{$lng['login']['username']}&nbsp;{$arrowcode['username']}</th>
+								<th>{$lng['panel']['path']}&nbsp;{$arrowcode['homedir']}</th>
+								<th>{$lng['panel']['options']}</th>
 							</tr>
-						</tfoot>
-					</if>
-				</table>
+						</thead>
+						<tbody>
+							{$accounts}
+						</tbody>
+						<if $pagingcode != ''>
+							<tfoot id="pagination">
+								<tr>
+									<td colspan="3">{$pagingcode}</td>
+								</tr>
+							</tfoot>
+						</if>
+					</table>
+				</div>
 			</div>
 		</div>
 

@@ -26,31 +26,33 @@ $header
 		</div>
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
-				<table class="table table-responsive">
-					<thead>
-						<tr>
-							<th>{$lng['admin']['ipsandports']['ip']}&nbsp;{$arrowcode['ip']}</th>
-							<th>{$lng['admin']['ipsandports']['port']}&nbsp;{$arrowcode['port']}</th>
-							<th>Listen</th>
-							<th>NameVirtualHost</th>
-							<th>vHost-Container</th>
-							<th>Specialsettings</th>
-							<th>ServerName</th>
-							<th>SSL</th>
-							<th>{$lng['panel']['options']}</th>
-						</tr>
-					</thead>
-					<tbody>
-						$ipsandports
-					</tbody>
-					<if $pagingcode != ''>
-						<tfoot id="pagination">
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
 							<tr>
-								<td colspan="8">{$pagingcode}</td>
+								<th>{$lng['admin']['ipsandports']['ip']}&nbsp;{$arrowcode['ip']}</th>
+								<th>{$lng['admin']['ipsandports']['port']}&nbsp;{$arrowcode['port']}</th>
+								<th>Listen</th>
+								<th>NameVirtualHost</th>
+								<th>vHost-Container</th>
+								<th>Specialsettings</th>
+								<th>ServerName</th>
+								<th>SSL</th>
+								<th>{$lng['panel']['options']}</th>
 							</tr>
-						</tfoot>
-					</if>
-				</table>
+						</thead>
+						<tbody>
+							$ipsandports
+						</tbody>
+						<if $pagingcode != ''>
+							<tfoot id="pagination">
+								<tr>
+									<td colspan="8">{$pagingcode}</td>
+								</tr>
+							</tfoot>
+						</if>
+					</table>
+				</div>
 			</div>
 		</div>
 			

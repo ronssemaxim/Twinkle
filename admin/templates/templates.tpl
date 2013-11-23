@@ -14,18 +14,20 @@ $header
 				<if $add>
 					<a href="{$linker->getLink(array('section' => 'templates', 'page' => $page, 'action' => 'add'))}"  class="btn btn-link"><span class="icon-plus"></span> {$lng['admin']['templates']['template_add']}</a>
 				</if>
-				<table class="table table-responsive">
-					<thead>
-						<tr>
-							<th>{$lng['login']['language']}</th>
-							<th>{$lng['admin']['templates']['action']}</th>
-							<th>{$lng['panel']['options']}</th>
-						</tr>
-					</thead>
-					<tbody>
-						{$templates}
-					</tbody>
-				</table>
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>{$lng['login']['language']}</th>
+								<th>{$lng['admin']['templates']['action']}</th>
+								<th>{$lng['panel']['options']}</th>
+							</tr>
+						</thead>
+						<tbody>
+							{$templates}
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 

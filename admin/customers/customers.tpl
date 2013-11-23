@@ -28,45 +28,47 @@ $header
 
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
-				<table class="table table-responsive">
-					<colgroup>
-						<col class="col-xs-2 col-sm-2 col-md-3 col-lg-3">
-						<col class="col-xs-3 col-sm-2 col-md-2 col-lg-3">
-						<col class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-						<col class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-						<col class="col-xs-2 col-sm-2 col-md-2 col-lg-1">
-						<col class="col-xs-1 col-sm-2 col-md-1 col-lg-1">
-					</colgroup>
-					<thead>
-						<tr>
-							<th>
-								{$lng['customer']['name']},
-								{$lng['customer']['firstname']}&nbsp;{$arrowcode['c.name']}
-							</th>
-							<th>
-								{$lng['login']['username']}&nbsp;{$arrowcode['c.loginname']}
-							</th>
-							<th>
-								{$lng['admin']['admin']}&nbsp;{$arrowcode['a.loginname']}
-							</th>
-							<th>{$lng['admin']['lastlogin_succ']}</th>
-							<th></th>
-							<th>{$lng['panel']['options']}</th>
-						</tr>
-					</thead>
-
-					<tbody>
-						$customers
-					</tbody>
-			
-					<if $pagingcode != ''>
-						<tfoot id="pagination">
+				<div class="table-responsive">
+					<table class="table">
+						<colgroup>
+							<col class="col-xs-2 col-sm-2 col-md-3 col-lg-3">
+							<col class="col-xs-3 col-sm-2 col-md-2 col-lg-3">
+							<col class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+							<col class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+							<col class="col-xs-2 col-sm-2 col-md-2 col-lg-1">
+							<col class="col-xs-1 col-sm-2 col-md-1 col-lg-1">
+						</colgroup>
+						<thead>
 							<tr>
-								<td colspan="6">{$pagingcode}</td>
+								<th>
+									{$lng['customer']['name']},
+									{$lng['customer']['firstname']}&nbsp;{$arrowcode['c.name']}
+								</th>
+								<th>
+									{$lng['login']['username']}&nbsp;{$arrowcode['c.loginname']}
+								</th>
+								<th>
+									{$lng['admin']['admin']}&nbsp;{$arrowcode['a.loginname']}
+								</th>
+								<th>{$lng['admin']['lastlogin_succ']}</th>
+								<th></th>
+								<th>{$lng['panel']['options']}</th>
 							</tr>
-						</tfoot>
-					</if>
-				</table>
+						</thead>
+
+						<tbody>
+							$customers
+						</tbody>
+				
+						<if $pagingcode != ''>
+							<tfoot id="pagination">
+								<tr>
+									<td colspan="6">{$pagingcode}</td>
+								</tr>
+							</tfoot>
+						</if>
+					</table>
+				</div>
 			</div>
 		</div>
 

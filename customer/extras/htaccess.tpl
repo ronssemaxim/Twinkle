@@ -27,31 +27,33 @@ $header
 
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
-				<table class="table table-responsive">
-					<thead>
-						<tr>
-							<th>{$lng['panel']['path']}&nbsp;{$arrowcode['path']}</th>
-							<th>{$lng['extras']['view_directory']}&nbsp;{$arrowcode['options_indexes']}</th>
-							<th>{$lng['extras']['error404path']}&nbsp;{$arrowcode['error404path']}</th>
-							<th>{$lng['extras']['error403path']}&nbsp;{$arrowcode['error403path']}</th>
-							<th>{$lng['extras']['error500path']}&nbsp;{$arrowcode['error500path']}</th>
-							<if $cperlenabled == 1 >
-							<th>{$lng['extras']['execute_perl']}&nbsp;{$arrowcode['options_cgi']}</th>
-							</if>
-							<th>{$lng['panel']['options']}</th>
-						</tr>
-					</thead>
-					<tbody>
-						{$htaccess}
-					</tbody>
-					<if $pagingcode != ''>
-						<tfoot id="pagination">
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
 							<tr>
-								<td colspan="7">{$pagingcode}</td>
+								<th>{$lng['panel']['path']}&nbsp;{$arrowcode['path']}</th>
+								<th>{$lng['extras']['view_directory']}&nbsp;{$arrowcode['options_indexes']}</th>
+								<th>{$lng['extras']['error404path']}&nbsp;{$arrowcode['error404path']}</th>
+								<th>{$lng['extras']['error403path']}&nbsp;{$arrowcode['error403path']}</th>
+								<th>{$lng['extras']['error500path']}&nbsp;{$arrowcode['error500path']}</th>
+								<if $cperlenabled == 1 >
+								<th>{$lng['extras']['execute_perl']}&nbsp;{$arrowcode['options_cgi']}</th>
+								</if>
+								<th>{$lng['panel']['options']}</th>
 							</tr>
-						</tfoot>
-					</if>
-				</table>
+						</thead>
+						<tbody>
+							{$htaccess}
+						</tbody>
+						<if $pagingcode != ''>
+							<tfoot id="pagination">
+								<tr>
+									<td colspan="7">{$pagingcode}</td>
+								</tr>
+							</tfoot>
+						</if>
+					</table>
+				</div>
 			</div>
 		</div>
 

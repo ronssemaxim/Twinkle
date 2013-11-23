@@ -29,28 +29,30 @@ $header
 
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
-				<table class="table table-responsive">
-					<thead>
-						<tr>
-							<th>{$lng['domains']['domainname']}&nbsp;{$arrowcode['d.domain']}</th>
-							<th>{$lng['admin']['ipsandports']['ip']}</th>
-							<th>{$lng['admin']['customer']}&nbsp;{$arrowcode['c.loginname']}</th>
-							<th>{$lng['panel']['options']}</th>
-						</tr>
-					</thead>
-
-					<tbody>
-						{$domains}
-					</tbody>
-					
-					<if $pagingcode != ''>
-						<tfoot id="pagination">
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
 							<tr>
-								<td colspan="4">{$pagingcode}</td>
+								<th>{$lng['domains']['domainname']}&nbsp;{$arrowcode['d.domain']}</th>
+								<th>{$lng['admin']['ipsandports']['ip']}</th>
+								<th>{$lng['admin']['customer']}&nbsp;{$arrowcode['c.loginname']}</th>
+								<th>{$lng['panel']['options']}</th>
 							</tr>
-						</tfoot>
-					</if>
-				</table>
+						</thead>
+
+						<tbody>
+							{$domains}
+						</tbody>
+						
+						<if $pagingcode != ''>
+							<tfoot id="pagination">
+								<tr>
+									<td colspan="4">{$pagingcode}</td>
+								</tr>
+							</tfoot>
+						</if>
+					</table>
+				</div>
 			</div>
 		</div>
 

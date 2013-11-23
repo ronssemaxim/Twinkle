@@ -29,19 +29,21 @@ $header
 		
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
-				<table class="table table-responsive">
-					<thead>
-						<tr>
-							<th>{$lng['logger']['date']}&nbsp;{$arrowcode['date']}</th>
-							<th>{$lng['logger']['type']}&nbsp;{$arrowcode['type']}</th>
-							<th>{$lng['logger']['user']}&nbsp;{$arrowcode['user']}</th>
-							<th style="width: 60%;">{$lng['logger']['action']}</th>
-						</tr>
-					</thead>
-					<tbody>
-						$log
-					</tbody>
-				</table>
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>{$lng['logger']['date']}&nbsp;{$arrowcode['date']}</th>
+								<th>{$lng['logger']['type']}&nbsp;{$arrowcode['type']}</th>
+								<th>{$lng['logger']['user']}&nbsp;{$arrowcode['user']}</th>
+								<th style="width: 60%;">{$lng['logger']['action']}</th>
+							</tr>
+						</thead>
+						<tbody>
+							$log
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 

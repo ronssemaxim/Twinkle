@@ -17,19 +17,21 @@ $header
 
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
-				<table class="table table-responsive">
-					<thead>
-						<tr>
-							<th>{$lng['admin']['phpsettings']['description']}</th>
-							<th>{$lng['admin']['phpsettings']['activedomains']}</th>
-							<th>{$lng['admin']['phpsettings']['binary']}</th>
-							<th>{$lng['admin']['phpsettings']['file_extensions']}</th>
-							<th>{$lng['panel']['options']}</th>
-					</thead>
-					<tbody>
-						$tablecontent
-					</tbody>
-				</table>
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>{$lng['admin']['phpsettings']['description']}</th>
+								<th>{$lng['admin']['phpsettings']['activedomains']}</th>
+								<th>{$lng['admin']['phpsettings']['binary']}</th>
+								<th>{$lng['admin']['phpsettings']['file_extensions']}</th>
+								<th>{$lng['panel']['options']}</th>
+						</thead>
+						<tbody>
+							$tablecontent
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 

@@ -11,21 +11,23 @@ $header
 
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
-				<table class="table table-responsive">
-					<thead>
-						<tr>
-							<th>{$lng['ticket']['archivedtime']}</th>
-							<th>{$lng['ticket']['ticket_answers']}</th>
-							<th>{$lng['ticket']['subject']}</th>
-							<th>{$lng['ticket']['lastreplier']}</th>
-							<th>{$lng['ticket']['priority']}</th>
-							<th>{$lng['panel']['options']}</th>
-						</tr>
-					</thead>
-					<tbody>
-						$tickets
-					</tbody>
-				</table>
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>{$lng['ticket']['archivedtime']}</th>
+								<th>{$lng['ticket']['ticket_answers']}</th>
+								<th>{$lng['ticket']['subject']}</th>
+								<th>{$lng['ticket']['lastreplier']}</th>
+								<th>{$lng['ticket']['priority']}</th>
+								<th>{$lng['panel']['options']}</th>
+							</tr>
+						</thead>
+						<tbody>
+							$tickets
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 	

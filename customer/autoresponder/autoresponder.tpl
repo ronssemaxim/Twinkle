@@ -29,20 +29,22 @@ $header
 
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
-				<table class="table table-responsive">
-					<thead>
-						<tr>
-							<th>{$lng['emails']['emailaddress']}</th>
-							<th>{$lng['autoresponder']['active']}</th>
-							<th>{$lng['autoresponder']['startenddate']}</th>
-							<th>{$lng['panel']['options']}</th>
-						</tr>
-					</thead>
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>{$lng['emails']['emailaddress']}</th>
+								<th>{$lng['autoresponder']['active']}</th>
+								<th>{$lng['autoresponder']['startenddate']}</th>
+								<th>{$lng['panel']['options']}</th>
+							</tr>
+						</thead>
 
-					<tbody>
-						{$autoresponder}
-					</tbody>
-				</table>
+						<tbody>
+							{$autoresponder}
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 

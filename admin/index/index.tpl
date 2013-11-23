@@ -10,7 +10,19 @@ $header
 		</div>
 
 		<div class="row visible-xs visible-sm visible-md visible-lg">
-			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+				<ul class="list-group">
+					<li class="list-group-item">
+						<h4 class="list-group-item-heading">
+							Last Cronjobs
+						</h4>
+					</li>
+					
+					{$cron_last_runs}
+				</ul>
+			</div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 				<ul class="list-group">
 					<li class="list-group-item">
 						<h4 class="list-group-item-heading">
@@ -91,7 +103,7 @@ $header
 				</ul>
 			</div>
 
-			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 				<ul class="list-group" id="froxlordetails">
 					<li class="list-group-item">
 						<h4 class="list-group-item-heading">
@@ -123,19 +135,7 @@ $header
 				</ul>
 			</div>
 
-			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
-				<ul class="list-group">
-					<li class="list-group-item">
-						<h4 class="list-group-item-heading">
-							Last Cronjobs
-						</h4>
-					</li>
-					
-					{$cron_last_runs}
-				</ul>
-			</div>
-
-			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 				<ul class="list-group">
 					<li class="list-group-item">
 						<h4 class="list-group-item-heading">

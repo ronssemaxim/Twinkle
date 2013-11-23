@@ -16,21 +16,23 @@ $header
 					<h4><span class="icon-info"></span> {$lng['admin']['warning']}</h4>
 					<p>{$lng['cron']['changewarning']}</p>
 				</div>
-			
-				<table class="table table-hover table-responsive">
-					<thead>
-						<tr>
-							<th>{$lng['cron']['description']}</th>
-							<th>{$lng['cron']['lastrun']}</th>
-							<th>{$lng['cron']['interval']}</th>
-							<th>{$lng['cron']['isactive']}</th>
-							<th>{$lng['panel']['options']}</th>
-						</tr>
-					</thead>
-					<tbody>
-						$crons
-					</tbody>
-				</table>
+				
+				<div class="table-responsive">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>{$lng['cron']['description']}</th>
+								<th>{$lng['cron']['lastrun']}</th>
+								<th>{$lng['cron']['interval']}</th>
+								<th>{$lng['cron']['isactive']}</th>
+								<th>{$lng['panel']['options']}</th>
+							</tr>
+						</thead>
+						<tbody>
+							$crons
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 	</article>

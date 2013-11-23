@@ -29,29 +29,31 @@ $header
 		
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
-				<table class="table table-responsive">
-					<thead>
-						<tr>
-							<th>{$lng['ticket']['lastchange']}&nbsp;{$arrowcode['lastchange']}</th>
-							<th>{$lng['ticket']['ticket_answers']}&nbsp;{$arrowcode['ticket_answers']}</th>
-							<th>{$lng['ticket']['subject']}&nbsp;{$arrowcode['subject']}</th>
-							<th>{$lng['ticket']['status']}&nbsp;{$arrowcode['status']}</th>
-							<th>{$lng['ticket']['lastreplier']}&nbsp;{$arrowcode['lastreplier']}</th>
-							<th>{$lng['ticket']['priority']}&nbsp;{$arrowcode['priority']}</th>
-							<th>{$lng['panel']['options']}</th>
-						</tr>
-					</thead>
-					<if $pagingcode != ''>
-						<tfoot>
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
 							<tr>
-								<td colspan="7">{$pagingcode}</td>
+								<th>{$lng['ticket']['lastchange']}&nbsp;{$arrowcode['lastchange']}</th>
+								<th>{$lng['ticket']['ticket_answers']}&nbsp;{$arrowcode['ticket_answers']}</th>
+								<th>{$lng['ticket']['subject']}&nbsp;{$arrowcode['subject']}</th>
+								<th>{$lng['ticket']['status']}&nbsp;{$arrowcode['status']}</th>
+								<th>{$lng['ticket']['lastreplier']}&nbsp;{$arrowcode['lastreplier']}</th>
+								<th>{$lng['ticket']['priority']}&nbsp;{$arrowcode['priority']}</th>
+								<th>{$lng['panel']['options']}</th>
 							</tr>
-						</tfoot>
-					</if>
-					<tbody>
-						{$tickets}
-					</tbody>
-				</table>
+						</thead>
+						<if $pagingcode != ''>
+							<tfoot>
+								<tr>
+									<td colspan="7">{$pagingcode}</td>
+								</tr>
+							</tfoot>
+						</if>
+						<tbody>
+							{$tickets}
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 

@@ -29,27 +29,29 @@ $header
 
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
-				<table class="table table-responsive">
-					<thead>
-						<tr>
-							<th>{$lng['mysql']['databasename']}&nbsp;{$arrowcode['databasename']}</th>
-							<th>{$lng['mysql']['databasedescription']}&nbsp;{$arrowcode['description']}</th>
-							<th>{$lng['mysql']['size']}</th>
-							<if 1 < count($sql_root)><th>{$lng['mysql']['mysql_server']}</th></if>
-							<th>{$lng['panel']['options']}</th>
-						</tr>
-					</thead>
-					<tbody>
-						{$mysqls}
-					</tbody>
-					<if $pagingcode != ''>
-						<tfoot id="pagination">
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
 							<tr>
-								<td colspan="5">{$pagingcode}</td>
+								<th>{$lng['mysql']['databasename']}&nbsp;{$arrowcode['databasename']}</th>
+								<th>{$lng['mysql']['databasedescription']}&nbsp;{$arrowcode['description']}</th>
+								<th>{$lng['mysql']['size']}</th>
+								<if 1 < count($sql_root)><th>{$lng['mysql']['mysql_server']}</th></if>
+								<th>{$lng['panel']['options']}</th>
 							</tr>
-						</tfoot>
-					</if>
-				</table>
+						</thead>
+						<tbody>
+							{$mysqls}
+						</tbody>
+						<if $pagingcode != ''>
+							<tfoot id="pagination">
+								<tr>
+									<td colspan="5">{$pagingcode}</td>
+								</tr>
+							</tfoot>
+						</if>
+					</table>
+				</div>
 			</div>
 		</div>
 
