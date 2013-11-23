@@ -3,7 +3,7 @@
 		<if $lng['admin']['servicedata'] == $title>
 			<h3 id="servicedata">{$title}
 		<else>
-			<h3 id="servicedata">{$title}
+			<h3>{$title}
 		</if>
 			<input type="submit" class="btn btn-default btn-success pull-right" value="{$lng['panel']['save']}" />
 		</h3>

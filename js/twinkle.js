@@ -280,8 +280,8 @@ $( document ).ready(function() {
 	/*
 	** Customer Hosting Packages Selector
 	*/
-	var serviceButton = '<div class="btn-group">';
-		serviceButton += '<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">';
+	var serviceButton = '<div class="btn-group pull-right">';
+		serviceButton += '&nbsp;<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">';
 	    serviceButton += 'Choose Hosting Package <span class="caret"></span>';
 		serviceButton += '</button>';
 		serviceButton += '<ul class="dropdown-menu" role="menu">';
@@ -295,7 +295,27 @@ $( document ).ready(function() {
 		serviceButton += '</ul>';
 		serviceButton += '</div>';
 
-	$('#servicedata h3').prepend(serviceButton);
+	$('#servicedata [type=submit]').after(serviceButton);
+
+	/*
+	** Extends jQuery with new functions
+	*/
+	jQuery.fn.extend({
+		highliteElementAndTimeout : function(htype) {
+			/*
+			** Highlites an element and set back to normal state
+			*/
+			
+			if(typeof htype === 'undefined') {
+				htype = 'has-success';
+			}
+
+			this.parent().addClass(htype);
+			setTimeout(function(obj, htype) {
+				obj.parent().removeClass(htype);
+			}, 3000, this, htype);
+		}
+	});
 
 	$('#small, #medium, #large, #unlimited, #configure').on('click', function(event) {
 		event.preventDefault();
@@ -304,144 +324,144 @@ $( document ).ready(function() {
 
 		switch(selectedPackage) {
 			case 'small' : 
-							$('#diskspace').val('500');
+							$('#diskspace').val('500').highliteElementAndTimeout();
 							$('[name=diskspace_ul]').attr("checked", false);
 
-							$('#traffic').val('5');
+							$('#traffic').val('5').highliteElementAndTimeout();
 							$('[name=traffic_ul]').attr("checked", false);
 
-							$('#subdomains').val('50');
+							$('#subdomains').val('50').highliteElementAndTimeout();
 							$('[name=subdomains_ul]').attr("checked", false);
 
-							$('#emails').val('50');
+							$('#emails').val('50').highliteElementAndTimeout();
 							$('[name=emails_ul]').attr("checked", false);
 
-							$('#email_accounts').val('50');
+							$('#email_accounts').val('50').highliteElementAndTimeout();
 							$('[name=email_accounts_ul]').attr("checked", false);
 
-							$('#email_forwarders').val('50');
+							$('#email_forwarders').val('50').highliteElementAndTimeout();
 							$('[name=email_forwarders_ul]').attr("checked", false);
 
-							$('#email_quota').val('50');
+							$('#email_quota').val('50').highliteElementAndTimeout();
 							$('[name=email_quota_ul]').attr("checked", false);
 
-							$('#email_autoresponder').val('50');
+							$('#email_autoresponder').val('50').highliteElementAndTimeout();
 							$('[name=email_autoresponder_ul]').attr("checked", false);
 
-							$('#ftps').val('50');
+							$('#ftps').val('50').highliteElementAndTimeout();
 							$('[name=ftps_ul]').attr("checked", false);
 
-							$('#tickets').val('50');
+							$('#tickets').val('50').highliteElementAndTimeout();
 							$('[name=tickets_ul]').attr("checked", false);
 
-							$('#mysqls').val('50');
+							$('#mysqls').val('50').highliteElementAndTimeout();
 							$('[name=mysqls_ul]').attr("checked", false);
 							break;
 			case 'medium' : 
-							$('#diskspace').val('5000');
+							$('#diskspace').val('5000').highliteElementAndTimeout();
 							$('[name=diskspace_ul]').attr("checked", false);
 
-							$('#traffic').val('50');
+							$('#traffic').val('50').highliteElementAndTimeout();
 							$('[name=traffic_ul]').attr("checked", false);
 
-							$('#subdomains').val('150');
+							$('#subdomains').val('150').highliteElementAndTimeout();
 							$('[name=subdomains_ul]').attr("checked", false);
 
-							$('#emails').val('150');
+							$('#emails').val('150').highliteElementAndTimeout();
 							$('[name=emails_ul]').attr("checked", false);
 
-							$('#email_accounts').val('150');
+							$('#email_accounts').val('150').highliteElementAndTimeout();
 							$('[name=email_accounts_ul]').attr("checked", false);
 
-							$('#email_forwarders').val('150');
+							$('#email_forwarders').val('150').highliteElementAndTimeout();
 							$('[name=email_forwarders_ul]').attr("checked", false);
 
-							$('#email_quota').val('150');
+							$('#email_quota').val('150').highliteElementAndTimeout();
 							$('[name=email_quota_ul]').attr("checked", false);
 
-							$('#email_autoresponder').val('150');
+							$('#email_autoresponder').val('150').highliteElementAndTimeout();
 							$('[name=email_autoresponder_ul]').attr("checked", false);
 
-							$('#ftps').val('150');
+							$('#ftps').val('150').highliteElementAndTimeout();
 							$('[name=ftps_ul]').attr("checked", false);
 
-							$('#tickets').val('150');
+							$('#tickets').val('150').highliteElementAndTimeout();
 							$('[name=tickets_ul]').attr("checked", false);
 
-							$('#mysqls').val('150');
+							$('#mysqls').val('150').highliteElementAndTimeout();
 							$('[name=mysqls_ul]').attr("checked", false);
 							break;
 			case 'large' : 
-							$('#diskspace').val('10000');
+							$('#diskspace').val('10000').highliteElementAndTimeout();
 							$('[name=diskspace_ul]').attr("checked", false);
 
-							$('#traffic').val('100');
+							$('#traffic').val('100').highliteElementAndTimeout();
 							$('[name=traffic_ul]').attr("checked", false);
 
-							$('#subdomains').val('300');
+							$('#subdomains').val('300').highliteElementAndTimeout();
 							$('[name=subdomains_ul]').attr("checked", false);
 
-							$('#emails').val('300');
+							$('#emails').val('300').highliteElementAndTimeout();
 							$('[name=emails_ul]').attr("checked", false);
 
-							$('#email_accounts').val('300');
+							$('#email_accounts').val('300').highliteElementAndTimeout();
 							$('[name=email_accounts_ul]').attr("checked", false);
 
-							$('#email_forwarders').val('300');
+							$('#email_forwarders').val('300').highliteElementAndTimeout();
 							$('[name=email_forwarders_ul]').attr("checked", false);
 
-							$('#email_quota').val('300');
+							$('#email_quota').val('300').highliteElementAndTimeout();
 							$('[name=email_quota_ul]').attr("checked", false);
 
-							$('#email_autoresponder').val('300');
+							$('#email_autoresponder').val('300').highliteElementAndTimeout();
 							$('[name=email_autoresponder_ul]').attr("checked", false);
 
-							$('#ftps').val('300');
+							$('#ftps').val('300').highliteElementAndTimeout();
 							$('[name=ftps_ul]').attr("checked", false);
 
-							$('#tickets').val('300');
+							$('#tickets').val('300').highliteElementAndTimeout();
 							$('[name=tickets_ul]').attr("checked", false);
 
-							$('#mysqls').val('300');
+							$('#mysqls').val('300').highliteElementAndTimeout();
 							$('[name=mysqls_ul]').attr("checked", false);
 							break;
 			case 'unlimited' : 
-							$('#diskspace').val('');
+							$('#diskspace').val('').highliteElementAndTimeout();
 							$('[name=diskspace_ul]').attr("checked", true);
 
-							$('#traffic').val('');
+							$('#traffic').val('').highliteElementAndTimeout();
 							$('[name=traffic_ul]').attr("checked", true);
 
-							$('#subdomains').val('');
+							$('#subdomains').val('').highliteElementAndTimeout();
 							$('[name=subdomains_ul]').attr("checked", true);
 
-							$('#emails').val('');
+							$('#emails').val('').highliteElementAndTimeout();
 							$('[name=emails_ul]').attr("checked", true);
 
-							$('#email_accounts').val('');
+							$('#email_accounts').val('').highliteElementAndTimeout();
 							$('[name=email_accounts_ul]').attr("checked", true);
 
-							$('#email_forwarders').val('');
+							$('#email_forwarders').val('').highliteElementAndTimeout();
 							$('[name=email_forwarders_ul]').attr("checked", true);
 
-							$('#email_quota').val('');
+							$('#email_quota').val('').highliteElementAndTimeout();
 							$('[name=email_quota_ul]').attr("checked", true);
 
-							$('#email_autoresponder').val('');
+							$('#email_autoresponder').val('').highliteElementAndTimeout();
 							$('[name=email_autoresponder_ul]').attr("checked", true);
 
-							$('#ftps').val('');
+							$('#ftps').val('').highliteElementAndTimeout();
 							$('[name=ftps_ul]').attr("checked", true);
 
-							$('#tickets').val('');
+							$('#tickets').val('').highliteElementAndTimeout();
 							$('[name=tickets_ul]').attr("checked", true);
 
-							$('#mysqls').val('');
+							$('#mysqls').val('').highliteElementAndTimeout();
 							$('[name=mysqls_ul]').attr("checked", true);
 							break;
 		}
 	});
-
+	
 	/*
 	** Traffic diagram and table
 	*/
