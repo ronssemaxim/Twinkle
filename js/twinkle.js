@@ -10,6 +10,54 @@
 $( document ).ready(function() {
 
 	/*
+	** Froxlor Newsfeed
+	*/
+	$.ajax({
+		type: "GET",
+		url: "alib/ajax.php?action=newsfeed"
+	})
+	.done(function(html) {
+		$('#newsfeeditems').append(html);
+		
+		$('.newsitem').each(function() {
+			// process old froxlor news feed markup 
+			var newstitle = $(this).find('b').html(),
+				newslink = $(this).find('a').attr('href');
+			
+			$(this).find('b').remove();
+			$(this).find('br').remove();
+
+			var newstext = $(this).find('a').html();
+			$(this).remove();
+			var listitem  = '<li class="list-group-item" id="newsitem">';
+				listitem += '<h5 class="list-group-iten-heading"><a href="'+newslink+'" target="_blank">'+newstitle+'</a></h5>';
+				listitem += newstext;
+				listitem += '</li>';
+			$('#newsfeeditems').append(listitem);
+		});
+		$('[id^=newsitem]').hide();
+	}).fail(function() {
+		var erroritem = '<li class="list-group-item">Newsfeed Error</li>';
+		$('#newsfeeditems').append(erroritem);
+	});
+
+	var newsshown = false;
+
+	$('#newstriggerbtn').on('click', function() {
+		if(newsshown) {
+			$(this).attr('title', 'Expand Cron List');
+			$('#newsicon').removeClass('icon-minus').addClass('icon-plus');
+			$('[id^=newsitem]').slideUp();
+			
+		} else {
+			$(this).attr('title', 'Collapse Cron List');
+			$('#newsicon').removeClass('icon-plus').addClass('icon-minus');
+			$('[id^=newsitem]').slideDown();
+		}
+		newsshown = !newsshown;
+	});
+
+	/*
 	** Smooth Scrolldown
 	*/
 	smoothScrollDown();

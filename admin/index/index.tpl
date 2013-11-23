@@ -21,7 +21,52 @@ $header
 					{$cron_last_runs}
 				</ul>
 			</div>
+
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+				<ul class="list-group" id="newsfeeditems">
+					<li class="list-group-item">
+						<h4 class="list-group-item-heading">
+							<span class="icon-bullhorn"></span> Froxlor News
+							<div class="pull-right">
+								<button type="button" class="btn btn-info btn-xs" id="newstriggerbtn"><span class="icon-plus" id="newsicon"></span></button>
+							</div>
+						</h4>
+					</li>
+				</ul>
+			</div>
 			
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+				<ul class="list-group" id="froxlordetails">
+					<li class="list-group-item">
+						<h4 class="list-group-item-heading">
+							<span class="icon-cogs" title="{$lng['admin']['froxlordetails']}"></span> {$lng['admin']['froxlordetails']}
+						</h4>
+					</li>
+					
+					<li class="list-group-item">
+						<span class="pull-right">{$version}{$branding}</span>
+						{$lng['admin']['installedversion']}
+					</li>
+
+					<li class="list-group-item">
+						<if $isnewerversion != 0 >
+							<span class="pull-right"><a href="$lookfornewversion_link"><strong>$lookfornewversion_lable</strong></a></span>
+						<else>
+							<span class="pull-right"><a href="$lookfornewversion_link">$lookfornewversion_lable</a></span>
+						</if>
+						{$lng['admin']['latestversion']}
+					</li>
+
+					<if $lookfornewversion_addinfo != ''>
+						<li class="list-group-item">							
+							$lookfornewversion_addinfo
+						</li>
+					</if>
+
+					{$outstanding_tasks}
+				</ul>
+			</div>
+
 			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 				<ul class="list-group">
 					<li class="list-group-item">
@@ -100,38 +145,6 @@ $header
 						<span class="badge" title="{$lng['admin']['used']} ({$lng['admin']['assignedmax']})">{$overview['tickets_used']} ({$userinfo['tickets_used']}/{$userinfo['tickets']})</span>
 						{$lng['customer']['tickets']}
 					</li>
-				</ul>
-			</div>
-
-			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-				<ul class="list-group" id="froxlordetails">
-					<li class="list-group-item">
-						<h4 class="list-group-item-heading">
-							<span class="icon-cogs" title="{$lng['admin']['froxlordetails']}"></span> {$lng['admin']['froxlordetails']}
-						</h4>
-					</li>
-					
-					<li class="list-group-item">
-						<span class="pull-right">{$version}{$branding}</span>
-						{$lng['admin']['installedversion']}
-					</li>
-
-					<li class="list-group-item">
-						<if $isnewerversion != 0 >
-							<span class="pull-right"><a href="$lookfornewversion_link"><strong>$lookfornewversion_lable</strong></a></span>
-						<else>
-							<span class="pull-right"><a href="$lookfornewversion_link">$lookfornewversion_lable</a></span>
-						</if>
-						{$lng['admin']['latestversion']}
-					</li>
-
-					<if $lookfornewversion_addinfo != ''>
-						<li class="list-group-item">							
-							$lookfornewversion_addinfo
-						</li>
-					</if>
-
-					{$outstanding_tasks}
 				</ul>
 			</div>
 
