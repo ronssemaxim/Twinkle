@@ -14,7 +14,7 @@ $header
 				<ul class="list-group">
 					<li class="list-group-item">
 						<h4 class="list-group-item-heading">
-							Last Cronjobs
+							<span class="icon-clock3"></span> Last Cronjobs
 						</h4>
 					</li>
 					
@@ -26,7 +26,7 @@ $header
 				<ul class="list-group">
 					<li class="list-group-item">
 						<h4 class="list-group-item-heading">
-							{$lng['admin']['ressourcedetails']}
+							<span class="icon-globe2"></span> {$lng['admin']['ressourcedetails']}
 						</h4>
 					</li>
 				
@@ -107,7 +107,7 @@ $header
 				<ul class="list-group" id="froxlordetails">
 					<li class="list-group-item">
 						<h4 class="list-group-item-heading">
-							{$lng['admin']['froxlordetails']}
+							<span class="icon-cogs" title="{$lng['admin']['froxlordetails']}"></span> {$lng['admin']['froxlordetails']}
 						</h4>
 					</li>
 					
@@ -139,7 +139,7 @@ $header
 				<ul class="list-group">
 					<li class="list-group-item">
 						<h4 class="list-group-item-heading">
-							{$lng['admin']['systemdetails']}
+							<span class="icon-shield"></span> {$lng['admin']['systemdetails']}
 						</h4>
 					</li>
 

@@ -27,6 +27,7 @@
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
 	<script>
 	  // CDN Fallback
 	  if(typeof jQuery == 'undefined') { 
@@ -36,14 +37,6 @@
 	</script>
 	<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
 	<script type="text/javascript" src="templates/{$theme}/js/libs/bootstrap.min.js"></script> 
-
-	<script type="text/javascript" src="js/jquery.jqplot.min.js"></script>
-	<script type="text/javascript" src="js/plugins/jqplot.barRenderer.min.js"></script>
-	<script type="text/javascript" src="js/plugins/jqplot.donutRenderer.min.js"></script>
-	<script type="text/javascript" src="js/plugins/jqplot.enhancedLegendRenderer.min.js"></script>
-	<script type="text/javascript" src="js/plugins/jqplot.categoryAxisRenderer.min.js"></script>
-	<script type="text/javascript" src="js/plugins/jqplot.highlighter.min.js"></script> 
-	<script type="text/javascript" src="js/plugins/jqplot.pointLabels.min.js"></script>
 
 	<script type="text/javascript" src="templates/{$theme}/js/twinkle.js"></script> 
 </body>

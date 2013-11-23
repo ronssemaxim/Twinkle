@@ -1,7 +1,10 @@
 <if $lng['tasks']['outstanding_tasks'] == $text>
 	<li class="list-group-item">
-		<h4 class="list-group-heading">{$text} <small><span class="badge" id="croncount"></span></small>
-			<span class="pull-right"><button type="button" class="btn btn-info btn-sm" id="crontriggerbtn"><span class="icon-minus" id="cronicon"></span></button></span>
+		<h4 class="list-group-heading"><span class="icon-briefcase"></span> {$text} 
+			<div class="pull-right">
+				<span class="badge" id="croncount"></span>&nbsp;
+				<button type="button" class="btn btn-info btn-xs" id="crontriggerbtn"><span class="icon-minus" id="cronicon"></span></button>
+			</div>
 		</h4>
 		<span class="pull-right">{$value}</span>
 	</li>
