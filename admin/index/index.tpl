@@ -45,15 +45,15 @@ $header
 						</li>
 						
 						<li class="list-group-item">
-							<span class="pull-right">{$version}{$branding}</span>
+							<small><span class="pull-right">{$version}{$branding}</span></small>
 							{$lng['admin']['installedversion']}
 						</li>
 
 						<li class="list-group-item">
 							<if $isnewerversion != 0 >
-								<span class="pull-right"><a href="$lookfornewversion_link"><strong>$lookfornewversion_lable</strong></a></span>
+								<small><span class="pull-right"><a href="$lookfornewversion_link"><strong>$lookfornewversion_lable</strong></a></span></small>
 							<else>
-								<span class="pull-right"><a href="$lookfornewversion_link">$lookfornewversion_lable</a></span>
+								<small><span class="pull-right"><a href="$lookfornewversion_link">$lookfornewversion_lable</a></span></small>
 							</if>
 							{$lng['admin']['latestversion']}
 						</li>
@@ -79,40 +79,40 @@ $header
 						</li>
 
 						<li class="list-group-item">
-							<span class="pull-right">{$_SERVER['SERVER_SOFTWARE']}</span>
+							<small><span class="pull-right">{$_SERVER['SERVER_SOFTWARE']}</span></small>
 							{$lng['admin']['serversoftware']}
 						</li>
 
 						<li class="list-group-item">
-							<span class="pull-right">$phpversion</span>
+							<small><span class="pull-right">$phpversion</span></small>
 							{$lng['admin']['phpversion']}
 						</li>
 
 						<li class="list-group-item">
-							<span class="pull-right">$mysqlserverversion</span>
+							<small><span class="pull-right">$mysqlserverversion</span></small>
 							{$lng['admin']['mysqlserverversion']}
 						</li>
 
 						<li class="list-group-item">
-							<span class="pull-right">$webserverinterface</span>
+							<small><span class="pull-right">$webserverinterface</span></small>
 							{$lng['admin']['webserverinterface']}
 						</li>
 
 						<li class="list-group-item">
-							<span class="pull-right">$load</span>
+							<small><span class="pull-right">$load</span></small>
 							{$lng['admin']['sysload']}
 						</li>
 
 						<if $showkernel == 1>
 							<li class="list-group-item">
-								<span class="pull-right">$kernel</span>
+								<small><span class="pull-right">$kernel</span></small>
 								Kernel
 							</li>
 						</if>
 
 						<if $uptime != ''>
 							<li class="list-group-item">
-								<span class="pull-right">$uptime</span>
+								<small><span class="pull-right">$uptime</span></small>
 								Uptime
 							</li>
 						</if>

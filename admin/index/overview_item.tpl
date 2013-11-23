@@ -6,11 +6,11 @@
 				<button type="button" class="btn btn-info btn-xs" id="crontriggerbtn"><span class="icon-minus" id="cronicon"></span></button>
 			</div>
 		</h4>
-		<span class="pull-right">{$value}</span>
+		<small><span class="pull-right">{$value}</span></small>
 	</li>
 <else>
 	<li class="list-group-item">
 		{$text}
-		<span class="pull-right">{$value}</span>
+		<small><span class="pull-right">{$value}</span></small>
 	</li>
 </if>

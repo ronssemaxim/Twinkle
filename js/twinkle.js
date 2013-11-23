@@ -47,7 +47,7 @@ $( document ).ready(function() {
 		});
 		$('[id^=newsitem]').hide();
 	}).fail(function() {
-		var erroritem = '<li class="list-group-item">Newsfeed Error</li>';
+		var erroritem = '<li class="list-group-item"><small>Newsfeed Error</small></li>';
 		$('#newsfeeditems').append(erroritem);
 	});
 
