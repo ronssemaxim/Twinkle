@@ -9,6 +9,16 @@
 
 $( document ).ready(function() {
 
+	//$( "#draggable1" ).draggable({ cursor: "croshair",	 grid: [ 80, 80 ], snap: "#dragarea" });
+	$( "#col1, #col2" ).sortable({
+			connectWith: ".connectedSortable",
+			cursor: "move",
+			placeholder: "sortable-placeholder",
+			activate : function(event, ui) {
+				ui.placeholder.height(ui.item.height());
+			}
+	}).disableSelection();
+
 	/*
 	** Froxlor Newsfeed
 	*/
@@ -30,7 +40,7 @@ $( document ).ready(function() {
 			var newstext = $(this).find('a').html();
 			$(this).remove();
 			var listitem  = '<li class="list-group-item" id="newsitem">';
-				listitem += '<h5 class="list-group-iten-heading"><a href="'+newslink+'" target="_blank">'+newstitle+'</a></h5>';
+				listitem += '<h5 class="list-group-item-heading"><a href="'+newslink+'" target="_blank">'+newstitle+'</a></h5>';
 				listitem += newstext;
 				listitem += '</li>';
 			$('#newsfeeditems').append(listitem);
@@ -45,12 +55,12 @@ $( document ).ready(function() {
 
 	$('#newstriggerbtn').on('click', function() {
 		if(newsshown) {
-			$(this).attr('title', 'Expand Cron List');
+			$(this).attr('title', 'Expand Newsfeed');
 			$('#newsicon').removeClass('icon-minus').addClass('icon-plus');
 			$('[id^=newsitem]').slideUp();
 			
 		} else {
-			$(this).attr('title', 'Collapse Cron List');
+			$(this).attr('title', 'Collapse Newsfeed');
 			$('#newsicon').removeClass('icon-plus').addClass('icon-minus');
 			$('[id^=newsitem]').slideDown();
 		}
@@ -62,6 +72,13 @@ $( document ).ready(function() {
 	*/
 	smoothScrollDown();
 	$(window).on('resize', function() {
+		if($(window).width() < 1010) {
+			$( "#col1, #col2" ).sortable("option", "disabled", true );
+			$('.connectedSortable .list-group-item-heading').css("cursor", "default");
+		} else {
+			$('.connectedSortable .list-group-item-heading').css("cursor", "move");
+			$( "#col1, #col2" ).sortable("option", "disabled", false );
+		}
 		//smoothScrollDown();
 	});
 
