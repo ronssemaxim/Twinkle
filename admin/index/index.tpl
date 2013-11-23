@@ -12,31 +12,6 @@ $header
 		<div class="row">
 			<div id="col1" class="connectedSortable col-xs-12 col-sm-12 col-md-6 col-lg-6">
 				<div>
-					<ul class="list-group draggable" id="draggable1">
-						<li class="list-group-item">
-							<h4 class="list-group-item-heading">
-								<span class="icon-clock3"></span> Last Cronjobs
-							</h4>
-						</li>
-						
-						{$cron_last_runs}
-					</ul>
-				</div>
-
-				<div>
-					<ul class="list-group" id="newsfeeditems">
-						<li class="list-group-item">
-							<h4 class="list-group-item-heading">
-								<span class="icon-bullhorn"></span> Froxlor News
-								<div class="pull-right">
-									<button type="button" class="btn btn-info btn-xs" id="newstriggerbtn"><span class="icon-plus" id="newsicon"></span></button>
-								</div>
-							</h4>
-						</li>
-					</ul>
-				</div>
-				
-				<div>
 					<ul class="list-group" id="froxlordetails">
 						<li class="list-group-item">
 							<h4 class="list-group-item-heading">
@@ -67,9 +42,34 @@ $header
 						{$outstanding_tasks}
 					</ul>
 				</div>
+
+				<div>
+					<ul class="list-group draggable" id="draggable1">
+						<li class="list-group-item">
+							<h4 class="list-group-item-heading">
+								<span class="icon-clock3"></span> Last Cronjobs
+							</h4>
+						</li>
+						
+						{$cron_last_runs}
+					</ul>
+				</div>
 			</div>
 
 			<div id="col2" class="connectedSortable col-xs-12 col-sm-12 col-md-6 col-lg-6">
+				<div>
+					<ul class="list-group" id="newsfeeditems">
+						<li class="list-group-item">
+							<h4 class="list-group-item-heading">
+								<span class="icon-bullhorn"></span> Froxlor News
+								<div class="pull-right">
+									<button type="button" class="btn btn-info btn-xs" id="newstriggerbtn"><span class="icon-plus" id="newsicon"></span></button>
+								</div>
+							</h4>
+						</li>
+					</ul>
+				</div>
+				
 				<div>
 					<ul class="list-group">
 						<li class="list-group-item">
