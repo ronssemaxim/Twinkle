@@ -37,9 +37,8 @@
 		<link href="//fonts.googleapis.com/css?family={$settings['panel']['webfont']}" rel="stylesheet">
 	</if>
 	<link rel="stylesheet" href="templates/{$theme}/css/bootstrap.min.css" type="text/css" media="all">
-	<link rel="stylesheet" href="templates/{$theme}/css/theme.bootstrap.min.css" type="text/css" media="all">
 	<link rel="stylesheet" href="templates/{$theme}/css/twinkle.css" type="text/css" media="all" />
-	
+
 	<link href="templates/{$theme}/favicon.ico" rel="icon" type="image/x-icon" />
 	
 	<title><if isset($userinfo['loginname']) && $userinfo['loginname'] != ''>{$userinfo['loginname']} - </if>Froxlor Server Management Panel</title>
