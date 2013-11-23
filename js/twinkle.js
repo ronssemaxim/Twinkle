@@ -251,6 +251,29 @@ $( document ).ready(function() {
 
 	$('#subdomain_add, #subdomain_edit').find('#path, #alias, #redirectcode, #openbasedir_path, #selectserveralias').addClass('form-control');
 
+	$('.cronjobtask').unwrap().find('li').attr('id', 'cronitem').addClass('list-group-item').appendTo('#froxlordetails');
+	$('.cronjobtask').remove();
+
+	var crontasksshown = true;
+
+	$('#crontriggerbtn').on('click', function() {
+		if(crontasksshown) {
+			$(this).attr('title', 'Expand Cron List');
+			$('#cronicon').removeClass('icon-minus').addClass('icon-plus');
+			$('[id^=cronitem]').slideUp();
+			
+		} else {
+			$(this).attr('title', 'Collapse Cron List');
+			$('#cronicon').removeClass('icon-plus').addClass('icon-minus');
+			$('[id^=cronitem]').slideDown();
+		}
+		crontasksshown = !crontasksshown;
+	});
+
+	var crons = $('[id^=cronitem]');
+
+	$('#croncount').html(crons.length);
+
 	//$('#settings_overview').find('#activate_selects').html(''); //wrapInner('<label></label>');
 	//$('#settings_overview').find('[type=text], [type=password], select, textarea').addClass('form-control');
 	//$('#settings_overview').find('select').wrap('<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"></div>');
@@ -305,7 +328,7 @@ $( document ).ready(function() {
 			/*
 			** Highlites an element and set back to normal state
 			*/
-			
+
 			if(typeof htype === 'undefined') {
 				htype = 'has-success';
 			}
