@@ -14,7 +14,7 @@ $( document ).ready(function() {
 	*/
 	$.ajax({
 		type: "GET",
-		url: "alib/ajax.php?action=newsfeed"
+		url: "lib/ajax.php?action=newsfeed"
 	})
 	.done(function(html) {
 		$('#newsfeeditems').append(html);
