@@ -5,8 +5,8 @@ Twinkle is a bootstrapped [Froxlor](http://www.froxlor.org/) Theme for mobile an
 
 Tested with Froxlor > 0.9.30
 
-Twinkle comes with its own jQuery Library and own Iconfonts. It uses Google CDN for jQuery but also 
-a fallback to Twinkles local JS Library.
+Twinkle comes with its own jQuery library and own Iconfonts. It uses Google CDN for jQuery but also 
+a fallback to Twinkles local JS library.
 
 Theme Features
 ---------------
@@ -19,7 +19,10 @@ Theme Features
 Installation
 -------------
 
-Just clone Twinkle directly to your Froxlor template folder. Then change Theme in Froxlor under Options -> Change Theme.
+Just clone Twinkle directly to your Froxlor template folder. Then change theme in Froxlor under Options -> Change Theme.
+
+   # cd /path/to/your/froxlor/templates
+   # git clone https://github.com/oschn0r/Twinkle.git 
 
 LESS
 ----
