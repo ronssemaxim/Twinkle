@@ -78,7 +78,7 @@
 								<a href="{$linker->getLink(array('section' => 'tickets', 'page' => 'tickets'))}">
 									<span class="icon-envelop" alt="{$lng['menue']['ticket']['ticket']}" /></span> 
 									<if 0 < $awaitingtickets>
-										<span class="badge">{$awaitingtickets}</span>
+										<span class="badge badge-important">{$awaitingtickets}</span>
 									</if>
 								</a>
 							</li>

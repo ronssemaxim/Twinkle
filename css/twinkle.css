@@ -10,6 +10,9 @@
 body {
   padding-top: 70px;
 }
+.badge-important {
+  background-color: #d2322d;
+}
 .middle {
   margin: 15px 0 15px 0;
 }
