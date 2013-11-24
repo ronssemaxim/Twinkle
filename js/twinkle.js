@@ -79,7 +79,6 @@ $( document ).ready(function() {
 			$('.connectedSortable .list-group-item-heading').css("cursor", "move");
 			$( "#col1, #col2" ).sortable("option", "disabled", false );
 		}
-		//smoothScrollDown();
 	});
 
 	function smoothScrollDown() {
@@ -128,111 +127,6 @@ $( document ).ready(function() {
 			});
 		}
 	}
-
-	/*
-	** Dashboard
-	*/
-	if(typeof dashboard === 'undefined') {
-		//console.log("no dashboard");
-	} else 
-	{
-		//console.log("dashboard");
-		var jqplotOptions = {
-							show: true,
-							seriesColors:['#73C774', '#C7754C', '#17BDB8'],
-							seriesDefaults: {
-								renderer:$.jqplot.DonutRenderer,
-								rendererOptions:{
-									// Donut's can be cut into slices like pies.
-									sliceMargin: 4,
-									// Pies and donuts can start at any arbitrary angle.
-									startAngle: -90,
-									showDataLabels: true,
-									// By default, data labels show the percentage of the donut/pie.
-									// You can show the data 'value' or data 'label' instead.
-									dataLabels: 'value'
-								}
-
-							},
-							legend: {
-                        show: true,
-                        location: 's',
-                        placement: 'outside' ,
-                        renderer: $.jqplot.EnhancedLegendRenderer,
-                        rendererOptions: { }
-                    },
-							grid: {
-								shadow: false,
-								drawBorder: false,
-								background: '#ffffff'
-							}
-						};
-
-		jqplotOptions.title = customers_used_title;
-		jqplotOptions.seriesDefaults.rendererOptions.dataLabels = customers_dataLabelVal;
-		var chart_customers = $.jqplot('chart_customers', [customers_used], jqplotOptions);
-
-		jqplotOptions.title = domains_used_title;
-		jqplotOptions.seriesDefaults.rendererOptions.dataLabels = domains_dataLabelVal;
-		var chart_domains = $.jqplot('chart_domains', [domains_used], jqplotOptions);
-
-		jqplotOptions.title = subdomains_used_title;
-		jqplotOptions.seriesDefaults.rendererOptions.dataLabels = subdomains_dataLabelVal;
-		var chart_subdomains = $.jqplot('chart_subdomains', [subdomains_used], jqplotOptions);
-
-		jqplotOptions.title = diskspace_used_title;
-		jqplotOptions.seriesDefaults.rendererOptions.dataLabels = diskspace_dataLabelVal;
-		var chart_diskspace = $.jqplot('chart_diskspace', [diskspace_used], jqplotOptions);
-	/*
-		$("#chart_diskspace").bind('jqplotDataHighlight', function(ev, seriesIndex, pointIndex, data) {
-	              	           var total = 250;
-	              	           var percent = 0;
-	              	           if(total != 0)
-	              	           {
-	              	        	 	percent = Math.round((data[1]/total)*100);
-	               	           }
-	               	           
-	                           var $this = $(this);
-	                           $this.find('.tooltip').remove();
-	                           $this.append($('<div class="tooltip jqplot-highlighter-tooltip" ></div>').text(data[0]+' : '+data[1]+' ('+ percent +'%)').css('opacity',1));
-	                       }); 
-	 
-	    $("#chart_diskspace").bind('jqplotDataUnhighlight', function(ev, seriesIndex, pointIndex, data) {
-	               var $this = $(this);
-	               $this.find('.tooltip').remove();
-	    });*/
-
-		/*jqplotOptions.title = traffic_used_title;
-		var chart_traffic = $.jqplot('chart_traffic', [traffic_used], jqplotOptions);
-
-		jqplotOptions.title = mysqls_used_title;
-		var chart_mysqls = $.jqplot('chart_mysqls', [mysqls_used], jqplotOptions);
-
-		jqplotOptions.title = emails_used_title;
-		var chart_mysqls = $.jqplot('chart_emails', [emails_used], jqplotOptions);
-
-		jqplotOptions.title = accounts_used_title;
-		var chart_accounts = $.jqplot('chart_accounts', [accounts_used], jqplotOptions);
-
-		jqplotOptions.title = email_forwarders_used_title;
-		var chart_email_forwarders = $.jqplot('chart_email_forwarders', [email_forwarders_used], jqplotOptions);
-
-		jqplotOptions.title = email_autoresponder_used_title;
-		var chart_email_autoresponder = $.jqplot('chart_email_autoresponder', [email_autoresponder_used], jqplotOptions);
-
-		jqplotOptions.title = email_quota_used_title;
-		var chart_email_quota = $.jqplot('chart_email_quota', [email_quota_used], jqplotOptions);
-
-		jqplotOptions.title = ftps_used_title;
-		var chart_ftps = $.jqplot('chart_ftps', [ftps_used], jqplotOptions);
-
-		jqplotOptions.title = tickets_used_title;
-		var chart_tickets = $.jqplot('chart_tickets', [tickets_used], jqplotOptions);*/
-
-		$(".jqplot-data-label:contains('∞')").css('font-size', '3em')
-											 .css('line-height', '17px');
-	}
-
 
 	/*
 	** Back Button in information panels
@@ -338,24 +232,6 @@ $( document ).ready(function() {
 	var crons = $('[id^=cronitem]');
 
 	$('#croncount').html(crons.length);
-
-	//$('#settings_overview').find('#activate_selects').html(''); //wrapInner('<label></label>');
-	//$('#settings_overview').find('[type=text], [type=password], select, textarea').addClass('form-control');
-	//$('#settings_overview').find('select').wrap('<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"></div>');
-
-	//$('#domain_add, #domain_edit, #customer_add, #customer_edit, #admin_add, #admin_edit, #ipsandports_add, #ipsandports_edit, #ticket_new, #category_new, #category_edit, #cron_edit, #email_edit, #forwarder_add, #autoresponder_add, #autoresponder_edit, #mysql_add, #mysql_edit, #htaccess_add, #htaccess_edit, #htpassword_add, #htpassword_edit, #ftp_add, #ftp_edit, #message_send').find('[name*=ul]').unwrap().wrap('<div class="input-group-addon"></div>');
-	//$('#domain_add, #domain_edit, #customer_add, #customer_edit, #admin_add, #admin_edit, #ipsandports_add, #ipsandports_edit, #ticket_new, #category_new, #category_edit, #cron_edit, #email_edit, #forwarder_add, #autoresponder_add, #autoresponder_edit, #mysql_add, #mysql_edit, #htaccess_add, #htaccess_edit, #htpassword_add, #htpassword_edit, #ftp_add, #ftp_edit, #message_send').find('[name*=ul]').parent().parent().wrap('<div class="input-group"></div>');
-
-	//$('#domain_add, #domain_edit, #customer_add, #customer_edit, #admin_add, #admin_edit, #ipsandports_add, #ipsandports_edit, #ticket_new, #category_new, #category_edit, #cron_edit, #email_edit, #forwarder_add, #autoresponder_add, #autoresponder_edit, #mysql_add, #mysql_edit, #htaccess_add, #htaccess_edit, #htpassword_add, #htpassword_edit, #ftp_add, #ftp_edit, #message_send').find('[style*="color:red"]').addClass('help-block col-xs-12 col-sm-12 col-md-12 col-lg-12');
-	//$('#domain_add, #domain_edit, #customer_add, #customer_edit, #admin_add, #admin_edit, #ipsandports_add, #ipsandports_edit, #ticket_new, #category_new, #category_edit, #cron_edit, #email_edit, #forwarder_add, #autoresponder_add, #autoresponder_edit, #mysql_add, #mysql_edit, #htaccess_add, #htaccess_edit, #htpassword_add, #htpassword_edit, #ftp_add, #ftp_edit, #message_send').find('[type=checkbox]').parent().wrap('<div class="col-xs-12"></div>');
-	//$('#domain_add, #domain_edit, #customer_add, #customer_edit, #admin_add, #admin_edit, #ipsandports_add, #ipsandports_edit, #ticket_new, #category_new, #category_edit, #cron_edit, #email_edit, #forwarder_add, #autoresponder_add, #autoresponder_edit, #mysql_add, #mysql_edit, #htaccess_add, #htaccess_edit, #htpassword_add, #htpassword_edit, #ftp_add, #ftp_edit, #message_send').find('th').wrapInner('<h3></h3>');
-	
-	//$('#email_part, #subdomain').addClass('form-control').wrap('<div class="col-xs-12 col-sm-5 col-md-6 col-lg-6"></div>');
-	//$('#domain').addClass('form-control').wrap('<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 pull-right"></div>');
-
-	//$('#settings_overview').find('[type=text], [type=password], select, textarea').addClass('form-control').parent().wrapInner('<div class="col-xs-6"></div>')
-	//$('#settings_overview').find('[type=checkbox]').css('margin-right', '5px').parent().wrap('<div class="col-xs-3"></div>');
-	//$('#settings_overview').find('th').wrapInner('<h3></h3>');
 
 	// Login Name must be <12 chars
 	$('#new_loginname').attr("maxlength", 12);
