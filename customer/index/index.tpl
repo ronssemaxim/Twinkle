@@ -10,63 +10,72 @@ $header
 		</div>
 
 		<div class="row">
-			<div class="col-sm-12 col-md-12 col-lg-12">
-		        <table>
-			       	<tr>
-						<th colspan="2">{$lng['index']['accountdetails']}</th>
-					</tr>
-				<tr>
-					<td>{$lng['login']['username']}:</td>
-					<td>{$userinfo['loginname']}</td>
-				</tr>
-				<tr>
-					<td>{$lng['customer']['domains']}:</td>
-					<td>$domains</td>
-				</tr>
-				<tr>
-					<td>{$lng['customer']['services']}:</td>
-					<td>$services_enabled</td>
-				</tr>
-				<tr>
-					<th colspan="2">{$lng['index']['customerdetails']}</th>
-				</tr>
-		        <if $userinfo['customernumber'] >
-			        <tr>
-			            <td>{$lng['customer']['customernumber']}:</td>
-			            <td>{$userinfo['customernumber']}</td>
-			        </tr>
-		        </if>
-		        <if $userinfo['company'] >
-			        <tr>
-			            <td>{$lng['customer']['company']}:</td>
-			            <td>{$userinfo['company']}</td>
-			        </tr>
-		        </if>
-		        <if $userinfo['name'] >
-			        <tr>
-			            <td>{$lng['customer']['name']}:</td>
-			            <td>{$userinfo['firstname']} {$userinfo['name']}</td>
-			        </tr>
-		        </if>
-		        <if $userinfo['street'] >
-			        <tr>
-			            <td>{$lng['customer']['street']}:</td>
-			            <td>{$userinfo['street']}</td>
-			        </tr>
-		        </if>
-		        <if $userinfo['city'] >
-			        <tr>
-			            <td>{$lng['customer']['zipcode']}/{$lng['customer']['city']}:</td>
-			            <td>{$userinfo['zipcode']} {$userinfo['city']}</td>
-			        </tr>
-		        </if>
-		        <if $userinfo['email'] >
-			        <tr>
-			            <td>{$lng['customer']['email']}:</td>
-			            <td>{$userinfo['email']}</td>
-			        </tr>
-		        </if>
-			</table>
+			<div id="col1" class="connectedSortable col-sm-12 col-md-6 col-lg-6">
+				<div>
+					<ul class="list-group" id="accountdetails">
+						<li class="list-group-item">
+							<h4 class="list-group-item-heading">
+								<span class="icon-user2" title="{$lng['index']['accountdetails']}"></span> {$lng['index']['accountdetails']}
+							</h4>
+						</li>
+						
+						<li class="list-group-item">
+							<small><span class="pull-right">{$userinfo['loginname']}</span></small>
+							{$lng['login']['username']}
+						</li>
+
+						<li class="list-group-item">
+							<small><span class="pull-right">$domains</span></small>
+							{$lng['customer']['domains']}
+						</li>
+
+						<li class="list-group-item">
+							<small><span class="pull-right">$services_enabled</span></small>
+							{$lng['customer']['services']}
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="col2" class="connectedSortable col-sm-12 col-md-6 col-lg-6">
+				<div>
+					<ul class="list-group" id="customerdetails">
+						<li class="list-group-item">
+							<h4 class="list-group-item-heading">
+								<span class="icon-users2" title="{$lng['index']['customerdetails']}"></span> {$lng['index']['customerdetails']}
+							</h4>
+						</li>
+
+						<if $userinfo['customernumber'] >
+							<li class="list-group-item">
+								<small><span class="pull-right">{$userinfo['customernumber']}</span></small>
+								{$lng['customer']['customernumber']}
+							</li>
+						</if>
+						<li class="list-group-item">
+							<address>
+								<if $userinfo['company'] >	
+									<strong>{$userinfo['company']}</strong><br />
+								</if>
+
+								<if $userinfo['name'] >
+									{$userinfo['firstname']} {$userinfo['name']}<br />
+								</if>
+
+								<if $userinfo['street'] >
+									{$userinfo['street']}<br />
+								</if>
+
+								<if $userinfo['city'] >
+									{$userinfo['zipcode']} {$userinfo['city']}<br />
+								</if>
+
+								<if $userinfo['email'] >
+									<a href="mailto:{$userinfo['email']}">{$userinfo['email']}</a><br />
+								</if>
+							</address>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</article>

@@ -1,1 +1,1 @@
-	<li class="">{$completeLink}</li>
+	<li>{$completeLink}</li>
