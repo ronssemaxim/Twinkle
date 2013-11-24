@@ -45,6 +45,7 @@ Libraries
 - [jQuery 2.0.3](http://jquery.com/download/) (no support for Internet Explorer 6/7/8)
 - [Bootstrap 3](http://getbootstrap.com/)
 - [Iconmoon Free Icon Pack](http://icomoon.io/)
+- [jQuery Passy](https://github.com/timseverien/passy/)
 
 Special Thanks
 --------------
