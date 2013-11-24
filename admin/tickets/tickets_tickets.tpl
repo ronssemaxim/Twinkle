@@ -1,4 +1,8 @@
-<tr>
+<if $row['status'] == $lng['ticket']['wait_reply']>
+	<tr class="warning">
+<else>
+	<tr>
+</if>
 	<td>{$row['lastchange']}</td>
 	<td>{$row['ticket_answers']}</td>
 	<td>{$row['subject']}</td>
