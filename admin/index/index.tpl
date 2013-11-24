@@ -37,8 +37,12 @@ $header
 							<li class="list-group-item">							
 								$lookfornewversion_addinfo
 							</li>
-						</if>
+						</if>						
+					</ul>
+				</div>
 
+				<div>
+					<ul class="list-group" id="outstandingtasks">
 						{$outstanding_tasks}
 					</ul>
 				</div>

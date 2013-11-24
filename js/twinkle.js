@@ -135,7 +135,6 @@ $( document ).ready(function() {
 		history.back();
 	});
 
-
 	/*
 	** Auto-select next field in configfile - wizard
 	*/
