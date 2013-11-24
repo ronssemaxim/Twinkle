@@ -79,16 +79,39 @@ $( document ).ready(function() {
 	});
 
 	/*
-	** Draggable Dashboard
+	** Sortable and Draggable Dashboard
+	** it saves the positions in local storage
+	** and restores it positions after reload.
 	*/
+	var order1 = localStorage.getItem('admin_dashboard_1'),
+		order2 = localStorage.getItem('admin_dashboard_2');
+
+	if(typeof order1 != 'undefined' && order1) {
+		order1 = order1.split(",");
+		reorder(order1, $("#col1"));
+	}
+
+	if(typeof order1 != 'undefined' && order2) {
+		order2 = order2.split(",");
+		reorder(order2, $("#col2"));
+	}
+
+	function reorder(orderArray, elementContainer)
+	{
+		$.each(orderArray, function(key, val){
+			elementContainer.append($("#"+val));
+		});
+	}
+
 	$( "#col1, #col2" ).sortable({
 			connectWith: ".connectedSortable",
 			cursor: "move",
 			placeholder: "sortable-placeholder",
 			update: function( event, ui ) {
-				var sorted = $(this).sortable("serialize");
-				console.log("sorted: "+sorted);
-				//localStorage['sorted'] = sorted;
+				var sorted1 = $('#col1').sortable("toArray"),
+					sorted2 = $('#col2').sortable("toArray");
+				localStorage.setItem('admin_dashboard_1', $('#col1').sortable('toArray'));
+				localStorage.setItem('admin_dashboard_2', $('#col2').sortable('toArray'));
 			},
 			activate : function(event, ui) {
 				ui.placeholder.height(ui.item.height());

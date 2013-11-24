@@ -11,7 +11,7 @@ $header
 
 		<div class="row">
 			<div id="col1" class="connectedSortable col-xs-12 col-sm-12 col-md-6 col-lg-6">
-				<div>
+				<div id="item_1">
 					<ul class="list-group" id="froxlordetails">
 						<li class="list-group-item">
 							<h4 class="list-group-item-heading">
@@ -41,13 +41,13 @@ $header
 					</ul>
 				</div>
 
-				<div>
+				<div id="item_2">
 					<ul class="list-group" id="outstandingtasks">
 						{$outstanding_tasks}
 					</ul>
 				</div>
 
-				<div>
+				<div id="item_3">
 					<ul class="list-group draggable" id="draggable1">
 						<li class="list-group-item">
 							<h4 class="list-group-item-heading">
@@ -61,7 +61,7 @@ $header
 			</div>
 
 			<div id="col2" class="connectedSortable col-xs-12 col-sm-12 col-md-6 col-lg-6">
-				<div>
+				<div id="item_4">
 					<ul class="list-group" id="newsfeeditems">
 						<li class="list-group-item">
 							<h4 class="list-group-item-heading">
@@ -74,7 +74,7 @@ $header
 					</ul>
 				</div>
 				
-				<div>
+				<div id="item_5">
 					<ul class="list-group">
 						<li class="list-group-item">
 							<h4 class="list-group-item-heading">
@@ -123,7 +123,7 @@ $header
 					</ul>
 				</div>
 
-				<div>
+				<div id="item_6">
 					<ul class="list-group">
 						<li class="list-group-item">
 							<h4 class="list-group-item-heading">
