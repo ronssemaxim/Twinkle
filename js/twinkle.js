@@ -85,6 +85,11 @@ $( document ).ready(function() {
 			connectWith: ".connectedSortable",
 			cursor: "move",
 			placeholder: "sortable-placeholder",
+			update: function( event, ui ) {
+				var sorted = $(this).sortable("serialize");
+				console.log("sorted: "+sorted);
+				//localStorage['sorted'] = sorted;
+			},
 			activate : function(event, ui) {
 				ui.placeholder.height(ui.item.height());
 			}

@@ -35,7 +35,7 @@ $header
 
 						<if $lookfornewversion_addinfo != ''>
 							<li class="list-group-item">							
-								$lookfornewversion_addinfo
+								<span class="icon-warning"></span> $lookfornewversion_addinfo
 							</li>
 						</if>						
 					</ul>
