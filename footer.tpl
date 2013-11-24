@@ -25,18 +25,18 @@
 		</div>
 	</footer>
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>-->
 
 	<script>
 	  // CDN Fallback
 	  if(typeof jQuery == 'undefined') { 
-	    document.write(unescape('%3Cscript src="templates/{$theme}/js/libs/jquery.min.js"%3E%3C/script%3E'));
-	    document.write(unescape('%3Cscript src="templates/{$theme}/js/libs/jquery-ui.min.js"%3E%3C/script%3E'));
+	    document.write(unescape('%3Cscript src="templates/{$theme}/js/latest/jquery.min.js"%3E%3C/script%3E'));
+	    document.write(unescape('%3Cscript src="templates/{$theme}/js/stable/jquery-ui.min.js"%3E%3C/script%3E'));
 	  }
 	</script>
 	<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
-	<script type="text/javascript" src="templates/{$theme}/js/libs/bootstrap.min.js"></script> 
+	<script type="text/javascript" src="templates/{$theme}/js/latest/bootstrap.min.js"></script> 
 
 	<script type="text/javascript" src="templates/{$theme}/js/twinkle.js"></script> 
 </body>
