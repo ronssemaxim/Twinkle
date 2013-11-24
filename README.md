@@ -11,12 +11,31 @@ a fallback to Twinkles local JS library.
 Theme Features
 ---------------
 
-- Full responsive for smartphones, phablets, tablets and superlarge screens.
+- Full responsive for smartphones, phablets, tablets and superlarge screens
 - Password strength indicator for all password inputs
-- Dashboard is full customizeable, draggable and sortable
-- Hosting Package Button for easy setup of webspace, email, ftp, mysql and so on.
-- APS Free. All APS code has been removed from Twinkle.
+- Dashboard is full customizeable, draggable and sortable. Positions will be saved in Local Storage and restored after page reload
+- Hosting Package Button for easy setup of webspace, email, ftp, mysql and so on. (Configuration dialog comes soon!)
+- APS Free. All APS code has been removed from Twinkle (if you'll find some APS appearances, pls inform me to remove that crap stuff)
 - Internet Explorer 6/7/8 free, thanks to jQuery 2.0.3
+
+Please Note!
+------------
+Twinkle is not for you, if...
+- Internet Explorer 6/7 or 8 is your major browser.
+- you need APS abilities.
+
+Twinkle is best for you, if...
+- you don't care about old browsers.
+- want the best user experience for mobile and large desktop devices.
+- loves Froxlor, because it's the best of its own.
+
+Roadmap (or goodness wishlist)
+-------------------------------
+- Live Support Chat made with Twinkle-Bot and socket.io (all encrypted)
+- Live Customer Log made with Logio per customer (encrypted too)
+- Support Notification via Twitter, Google+ or Facebook if a customer needs help
+- Twinkle Like WebFTP Interace
+- CronJob Countdown to notify admins or customers when next cronjobs runs
 
 Installation
 -------------
