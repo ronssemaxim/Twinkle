@@ -209,7 +209,7 @@ $( document ).ready(function() {
 
 	$('#subdomain_add, #subdomain_edit').find('#path, #alias, #redirectcode, #openbasedir_path, #selectserveralias').addClass('form-control');
 
-	$('.cronjobtask').unwrap().find('li').attr('id', 'cronitem').addClass('list-group-item').appendTo('#froxlordetails');
+	$('.cronjobtask').unwrap().find('li').attr('id', 'cronitem').addClass('list-group-item').appendTo('#outstandingtasks');
 	$('.cronjobtask').remove();
 
 	var crontasksshown = true;
