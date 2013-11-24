@@ -12,6 +12,8 @@ Theme Features
 ---------------
 
 - Full responsive for smartphones, phablets, tablets and superlarge screens.
+- Password strength indicator for all password inputs
+- Dashboard is full customizeable, draggable and sortable
 - Hosting Package Button for easy setup of webspace, email, ftp, mysql and so on.
 - APS Free. All APS code has been removed from Twinkle.
 - Internet Explorer 6/7/8 free, thanks to jQuery 2.0.3
