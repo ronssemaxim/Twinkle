@@ -9,7 +9,57 @@
 
 $( document ).ready(function() {
 
-	//$( "#draggable1" ).draggable({ cursor: "croshair",	 grid: [ 80, 80 ], snap: "#dragarea" });
+	/*
+	** Inject Passy.js for a better and stronger customer/admin/ftp/mysql/htaccess/change password
+	*/
+	var $input = $( '#new_customer_password_suggestion, #admin_password_suggestion, #mysql_password_suggestion, #ftp_password_suggestion, #directory_password_suggestion' ),
+		$realinput = $( '#new_customer_password, #admin_password, #mysql_password, #ftp_password, #directory_password' );
+
+		$input.wrap('<div class="input-group"></div>');
+		$input.after('<span class="input-group-btn"><button type="button" class="btn btn-primary" id="generate">Generate</button></span>')
+		$input.after('<span class="input-group-addon passwordstrength" id="passwordstrength"></span>');
+
+		$realinput.wrap('<div class="input-group"></div>');
+		$realinput.after('<span class="input-group-addon passwordstrength" id="realpasswordstrength">no password yet</span>');
+
+	var $output = $( '#passwordstrength' ),
+		$realoutput = $( '#realpasswordstrength' );
+
+	$.passy.requirements.length.min = 4;
+
+	var feedback = [
+		{ color: '#c00', text: 'poor' },
+		{ color: '#c80', text: 'okay' },
+		{ color: '#0c0', text: 'good' },
+		{ color: '#0c0', text: 'fabulous!' }
+	];
+
+	$input.passy(function(strength, valid) {
+		$output.text(feedback[strength].text);
+		$output.css('background-color', feedback[strength].color);
+
+		if( valid ) $input.css(' border-color', 'green' );
+		else $input.css( 'border-color', 'red' );
+	});
+
+	$realinput.passy(function(strength, valid) {
+		$realoutput.text(feedback[strength].text);
+		$realoutput.css('background-color', feedback[strength].color);
+
+		if( valid ) $realinput.css(' border-color', 'green' );
+		else $realinput.css( 'border-color', 'red' );
+	});
+
+	$('#generate').on('click', function() {
+		$input.passy( 'generate', 8 );
+	});
+
+	// initial generate strong password
+	$input.passy( 'generate', 8 );
+
+	/*
+	** Draggable Dashboard
+	*/
 	$( "#col1, #col2" ).sortable({
 			connectWith: ".connectedSortable",
 			cursor: "move",

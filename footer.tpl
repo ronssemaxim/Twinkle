@@ -36,7 +36,8 @@
 	  }
 	</script>
 	<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
-	<script type="text/javascript" src="templates/{$theme}/js/latest/bootstrap.min.js"></script> 
+	<script type="text/javascript" src="templates/{$theme}/js/latest/bootstrap.min.js"></script>
+	<script type="text/javascript" src="templates/{$theme}/js/stable/jquery-passy.js"></script> 
 
 	<script type="text/javascript" src="templates/{$theme}/js/twinkle.js"></script> 
 </body>
