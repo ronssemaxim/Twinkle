@@ -12,50 +12,71 @@ $( document ).ready(function() {
 	/*
 	** Inject Passy.js for a better and stronger customer/admin/ftp/mysql/htaccess/change password
 	*/
-	var $input = $( '#new_customer_password_suggestion, #admin_password_suggestion, #mysql_password_suggestion, #ftp_password_suggestion, #directory_password_suggestion' ),
-		$realinput = $( '#new_customer_password, #admin_password, #mysql_password, #ftp_password, #directory_password' );
+	var $inputsuggest = $( '#new_customer_password_suggestion, #admin_password_suggestion, #mysql_password_suggestion, #ftp_password_suggestion, #directory_password_suggestion' ),
+		$input = $( '#new_password, #new_customer_password, #admin_password, #mysql_password, #ftp_password, #directory_password' );
+
+		$inputsuggest.wrap('<div class="input-group"></div>');
+		$inputsuggest.after('<span class="input-group-btn"><button type="button" class="btn btn-primary" id="generate" title="Generate new password">Generate</button></span>')
+		$inputsuggest.after('<span class="input-group-btn"><button type="button" class="btn btn-warning" id="pushit" title="Move that password up"><span class="icon-arrow-up"></span></button></span>')
+		$inputsuggest.after('<span class="input-group-addon passwordstrength" id="passwordstrength" title="Password strength"></span>');
 
 		$input.wrap('<div class="input-group"></div>');
-		$input.after('<span class="input-group-btn"><button type="button" class="btn btn-primary" id="generate">Generate</button></span>')
-		$input.after('<span class="input-group-addon passwordstrength" id="passwordstrength"></span>');
+		$input.after('<span class="input-group-addon passwordstrength" id="realpasswordstrength" title="Password strength">no password yet</span>');
 
-		$realinput.wrap('<div class="input-group"></div>');
-		$realinput.after('<span class="input-group-addon passwordstrength" id="realpasswordstrength">no password yet</span>');
-
-	var $output = $( '#passwordstrength' ),
-		$realoutput = $( '#realpasswordstrength' );
+	var $outputsuggest = $( '#passwordstrength' ),
+		$output = $( '#realpasswordstrength' );
 
 	$.passy.requirements.length.min = 4;
 
 	var feedback = [
-		{ color: '#c00', text: 'poor' },
-		{ color: '#c80', text: 'okay' },
-		{ color: '#0c0', text: 'good' },
-		{ color: '#0c0', text: 'fabulous!' }
+		{ color: '#c00', text: 'Schwach', iclass: 'label-danger' },
+		{ color: '#c80', text: 'Okay', iclass: 'label-warning' },
+		{ color: '#0c0', text: 'Gut', iclass: 'label-info' },
+		{ color: '#0c0', text: 'Stark', iclass: 'label-success' }
 	];
+
+	$inputsuggest.passy(function(strength, valid) {
+		$outputsuggest.text(feedback[strength].text);
+		$outputsuggest.removeClass('label-danger')
+					  .removeClass('label-warning')
+					  .removeClass('label-info')
+					  .removeClass('label-success');
+		$outputsuggest.addClass(feedback[strength].iclass);
+
+		/*if( valid ) {
+			$inputsuggest.css(' border-color', 'green' );
+		} else {
+			$inputsuggest.css( 'border-color', 'red' );
+		}*/
+	});
 
 	$input.passy(function(strength, valid) {
 		$output.text(feedback[strength].text);
-		$output.css('background-color', feedback[strength].color);
+		$output.removeClass('label-danger')
+			   .removeClass('label-warning')
+			   .removeClass('label-info')
+ 			   .removeClass('label-success');
+		$output.addClass(feedback[strength].iclass);
 
-		if( valid ) $input.css(' border-color', 'green' );
-		else $input.css( 'border-color', 'red' );
-	});
-
-	$realinput.passy(function(strength, valid) {
-		$realoutput.text(feedback[strength].text);
-		$realoutput.css('background-color', feedback[strength].color);
-
-		if( valid ) $realinput.css(' border-color', 'green' );
-		else $realinput.css( 'border-color', 'red' );
+		/*if( valid ) 
+		{
+			$input.css(' border-color', 'green' );
+		} else {
+			$input.css( 'border-color', 'red' );
+		}*/
 	});
 
 	$('#generate').on('click', function() {
-		$input.passy( 'generate', 8 );
+		$inputsuggest.passy( 'generate', 8 );
 	});
 
 	// initial generate strong password
-	$input.passy( 'generate', 8 );
+	$inputsuggest.passy( 'generate', 8 );
+
+	$('#pushit').on('click', function() {		
+		$input.val($inputsuggest.val());
+		$input.trigger('keyup');
+	});
 
 	/*
 	** Draggable Dashboard
