@@ -11,9 +11,11 @@ $header
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
 				<form method="post" action="{$linker->getLink(array('section' => 'index'))}" enctype="application/x-www-form-urlencoded">
-					<script type="text/javascript">
-						var themeDescriptions = {$json_infos};
-					</script>
+					<if isset($json_infos)>
+						<script type="text/javascript">
+							var themeDescriptions = {$json_infos};
+						</script>
+					</if>
 					<table class="table table-responsive theme-table">
 						<colgroup>
 							<col class="col-xs-3">
