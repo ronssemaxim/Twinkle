@@ -50,9 +50,9 @@ $( document ).ready(function() {
 	/*
 	**  Crap JS stuff for a nice domains panel in the customer dashboard
 	*/
-	$('#customerdomaintriggerbtn').on('click', function() {
-		var customerdomainsshown = true;
+	var customerdomainsshown = true;
 
+	$('#customerdomaintriggerbtn').on('click', function() {
 		if(customerdomainsshown) {
 			$(this).attr('title', 'Expand domainlist');
 			$('#customericon').removeClass('icon-minus').addClass('icon-plus');
