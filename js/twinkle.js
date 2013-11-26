@@ -10,6 +10,44 @@
 $( document ).ready(function() {
 
 	/*
+	** Sortable and Draggable Customer Dashboard
+	** it saves the positions in local storage
+	** and restores it positions after reload.
+	*/
+	var customer_order1 = localStorage.getItem('customer_dashboard_1'),
+		customer_order2 = localStorage.getItem('customer_dashboard_2');
+
+	if(typeof customer_order1 != 'undefined' && customer_order1) {
+		customer_order1 = customer_order1.split(",");
+		reorder(customer_order1, $("#customer_col1"));
+	}
+
+	if(typeof customer_order2 != 'undefined' && customer_order2) {
+		customer_order2 = customer_order2.split(",");
+		reorder(customer_order2, $("#customer_col2"));
+	}
+
+	$( "#customer_col1, #customer_col2" ).sortable({
+			connectWith: ".connectedSortable",
+			cursor: "move",
+			placeholder: "sortable-placeholder",
+			update: function( event, ui ) {
+				var sorted1 = $('#customer_col1').sortable("toArray"),
+					sorted2 = $('#customer_col2').sortable("toArray");
+				localStorage.setItem('customer_dashboard_1', $('#customer_col1').sortable('toArray'));
+				localStorage.setItem('customer_dashboard_2', $('#customer_col2').sortable('toArray'));
+			},
+			activate : function(event, ui) {
+				ui.placeholder.height(ui.item.height());
+			}
+	}).disableSelection();
+
+	/*
+	** make rel="external" links open in a new window
+	*/ 
+	$("a[rel='external']").attr('target', '_blank');
+
+	/*
 	**  Crap JS stuff for a nice domains panel in the customer dashboard
 	*/
 	$('#customerdomaintriggerbtn').on('click', function() {
@@ -110,7 +148,7 @@ $( document ).ready(function() {
 	});
 
 	/*
-	** Sortable and Draggable Dashboard
+	** Sortable and Draggable Admin Dashboard
 	** it saves the positions in local storage
 	** and restores it positions after reload.
 	*/
@@ -122,7 +160,7 @@ $( document ).ready(function() {
 		reorder(order1, $("#col1"));
 	}
 
-	if(typeof order1 != 'undefined' && order2) {
+	if(typeof order2 != 'undefined' && order2) {
 		order2 = order2.split(",");
 		reorder(order2, $("#col2"));
 	}

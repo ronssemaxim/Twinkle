@@ -10,8 +10,8 @@ $header
 		</div>
 
 		<div class="row">
-			<div id="col1" class="connectedSortable col-sm-12 col-md-6 col-lg-6">
-				<div>
+			<div id="customer_col1" class="connectedSortable col-sm-12 col-md-6 col-lg-6">
+				<div id="customer_item_1">
 					<ul class="list-group" id="domaindetails">
 						<li class="list-group-item">
 							<h4 class="list-group-item-heading">
@@ -31,7 +31,8 @@ $header
 						</li>
 					</ul>
 				</div>
-				<div>
+
+				<div id="customer_item_2">
 					<ul class="list-group" id="accountdetails">
 						<li class="list-group-item">
 							<h4 class="list-group-item-heading">
@@ -52,8 +53,8 @@ $header
 				</div>
 			</div>
 
-			<div id="col2" class="connectedSortable col-sm-12 col-md-6 col-lg-6">
-				<div>
+			<div id="customer_col2" class="connectedSortable col-sm-12 col-md-6 col-lg-6">
+				<div id="customer_item_3">
 					<ul class="list-group" id="customerdetails">
 						<li class="list-group-item">
 							<h4 class="list-group-item-heading">
