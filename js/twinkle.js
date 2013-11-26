@@ -10,6 +10,37 @@
 $( document ).ready(function() {
 
 	/*
+	**  Crap JS stuff for a nice domains panel in the customer dashboard
+	*/
+	$('#customerdomaintriggerbtn').on('click', function() {
+		var customerdomainsshown = true;
+
+		if(customerdomainsshown) {
+			$(this).attr('title', 'Expand domainlist');
+			$('#customericon').removeClass('icon-minus').addClass('icon-plus');
+			$('#customerdomains').slideUp();
+			
+		} else {
+			$(this).attr('title', 'Collapse domainlist');
+			$('#customericon').removeClass('icon-plus').addClass('icon-minus');
+			$('#customerdomains').slideDown();
+		}
+		customerdomainsshown = !customerdomainsshown;
+	});
+
+	if($("#customerdomains").length) {
+		if($.trim($("#customerdomains").html()).length) {
+			var customerDomains = $('#customerdomains').html().trim();
+
+			var customerDomainsCount = customerDomains.split(',');
+			$('#customerdomaincount').html(customerDomainsCount.length);
+		} else {
+			$('#customerdomaincount').html(0);
+			$("#customerdomains").html('<span class="icon-warning"> No domains yet...</span>');
+		}
+	}
+
+	/*
 	** Inject Passy.js for a better and stronger customer/admin/ftp/mysql/htaccess/change password
 	*/
 	var $inputsuggest = $( '#new_customer_password_suggestion, #admin_password_suggestion, #mysql_password_suggestion, #ftp_password_suggestion, #directory_password_suggestion' ),

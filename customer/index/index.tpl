@@ -3,7 +3,7 @@ $header
 		<div class="row">
 			<header class="col-sm-12 col-md-12 col-lg-12">
 				<h2>
-					<a href="#" id="articlehead"></a><span class="icon-globe2"></span>&nbsp;
+					<a href="#" id="articlehead"></a><span class="icon-home4"></span>&nbsp;
 					{$lng['panel']['dashboard']}
 				</h2>
 			</header>
@@ -11,6 +11,26 @@ $header
 
 		<div class="row">
 			<div id="col1" class="connectedSortable col-sm-12 col-md-6 col-lg-6">
+				<div>
+					<ul class="list-group" id="domaindetails">
+						<li class="list-group-item">
+							<h4 class="list-group-item-heading">
+								<div class="pull-right">
+									<span class="badge" id="customerdomaincount"></span>&nbsp;
+									<button type="button" class="btn btn-info btn-xs" id="customerdomaintriggerbtn" title="Expand domainlist"><span class="icon-minus" id="customericon"></span></button>
+								</div>
+								<div>
+									<span class="icon-globe2"></span>&nbsp;
+									{$lng['customer']['domains']}
+								</div>
+							</h4>
+						</li>
+						
+						<li class="list-group-item" id="customerdomains">
+							$domains
+						</li>
+					</ul>
+				</div>
 				<div>
 					<ul class="list-group" id="accountdetails">
 						<li class="list-group-item">
@@ -22,12 +42,7 @@ $header
 						<li class="list-group-item">
 							<small><span class="pull-right">{$userinfo['loginname']}</span></small>
 							{$lng['login']['username']}
-						</li>
-
-						<li class="list-group-item">
-							<small><span class="pull-right">$domains</span></small>
-							{$lng['customer']['domains']}
-						</li>
+						</li>						
 
 						<li class="list-group-item">
 							<small><span class="pull-right">$services_enabled</span></small>
@@ -36,6 +51,7 @@ $header
 					</ul>
 				</div>
 			</div>
+
 			<div id="col2" class="connectedSortable col-sm-12 col-md-6 col-lg-6">
 				<div>
 					<ul class="list-group" id="customerdetails">
