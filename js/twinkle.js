@@ -8,6 +8,11 @@
 */
 
 $( document ).ready(function() {
+
+	/*
+	** Here we mark the links, which opens a new tab with a little nice earth icon and a title tag :-)
+	*/
+	$('a[target="_blank"], a[rel="external"]').prepend('<small><span class="icon-earth"></span></small> ').attr('title','Opens new tab');
 	
 	/*
 	** Does some magic to made the sidebar able to show active page or subpage

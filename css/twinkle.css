@@ -40,6 +40,9 @@ section nav ul li a {
   color: #716b7a;
   padding: 5px 15px !important;
 }
+section article table tbody [class="icon-earth"] {
+  font-size: 1.0em !important;
+}
 section nav section:first-child {
   display: none;
 }
