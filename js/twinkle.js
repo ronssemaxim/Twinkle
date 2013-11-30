@@ -8,6 +8,23 @@
 */
 
 $( document ).ready(function() {
+	
+	/*
+	** Does some magic to made the sidebar able to show active page or subpage
+	*/
+	var a = window.location.href.substr(window.location.href.lastIndexOf("/") + 1).split("?");
+
+	if($('.sidebar a[href*="'+a[0]+'"]').length > 1) {
+		/*
+		* We have more than one selected menu item. Specify the selector
+		*/
+		$('.sidebar a[href*="'+a[0]+'?'+a[1]+'"]').parent().addClass('active');
+	} else {
+		/*
+		* only one candidate, do the magic.
+		*/
+		$('.sidebar a[href*="'+a[0]+'"]').parent().addClass('active');
+	}
 
 	/*
 	** Sortable and Draggable Customer Dashboard
