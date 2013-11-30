@@ -28,60 +28,55 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="Default-Style" content="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<if $settings['panel']['no_robots'] == '0'>
-		<meta name="robots" content="noindex, nofollow, noarchive" />
-		<meta name="GOOGLEBOT" content="nosnippet" />
-	</if>
+	<meta name="robots" content="noindex, nofollow, noarchive" />
+	<meta name="GOOGLEBOT" content="nosnippet" />
 
-	<if $settings['panel']['use_webfonts'] == '1'>
-		<link href="//fonts.googleapis.com/css?family={$settings['panel']['webfont']}" rel="stylesheet">
-	</if>
-	<link rel="stylesheet" href="templates/{$theme}/css/bootstrap.min.css" type="text/css" media="all">
-	<link rel="stylesheet" href="css/theme.bootstrap.css" type="text/css" media="all">
-	<link rel="stylesheet" href="templates/{$theme}/css/twinkle.css" type="text/css" media="all" />
-	<!--[if IE]><link rel="stylesheet" href="templates/{$theme}/css/main_ie.css" type="text/css" /><![endif]-->
-	<link href="templates/{$theme}/favicon.ico" rel="icon" type="image/x-icon" />
+	<link rel="stylesheet" href="templates/Twinkle/css/latest/bootstrap.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="templates/Twinkle/css/twinkle.css" type="text/css" media="all" />
+
+	<link href="templates/Twinkle/favicon.ico" rel="icon" type="image/x-icon" />
 	
 	<title>Database error - Froxlor Server Management Panel</title>
-
-	<style type="text/css">
-	body {
-        font-family: <if $settings['panel']['use_webfonts'] == '1'>{$webfont},</if> Verdana, Geneva, sans-serif;
-	}
-	</style>
 </head>
 <body>
 	<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="row">
 			<header class="col-xs-12 col-sm-10 col-md-8 col-lg-5 col-sm-offset-1 col-md-offset-2 col-lg-offset-3 text-center">
 				<p>
-					<img src="{$header_logo}" alt="Froxlor Server Management Panel" />
+					<img src="templates/Twinkle/assets/img/logo.png" alt="Froxlor Server Management Panel" />
 				</p>
 			</header>
 		</div>
 
 		<div class="row">
-			<div class="col-xs-12 col-sm-10 col-md-8 col-lg-5 col-sm-offset-1 col-md-offset-2 col-lg-offset-3 panel">
+			<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 panel">
 				<div class="alert alert-danger fade in">
 					<h4><span class="icon-error"></span> A database error occured</h4>
 					<p><TEXT></p>
 					<p><pre style="overflow:auto;"><DEBUG></pre></p>
 					<p>
-						<a href="./install/install.php" title="Click to start the install process">Start install</a>
+						<a href="#" title="Click here to go back" id="historyback" class="btn btn-link">Go back</a>&nbsp;
+						<a href="<LINK>" title="Click here to send error report" class="btn btn-danger">Send Error Report</a>
 					</p>
 				</div>	
 			</div>
 		</div>
 	</article>
+
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
 	<script>
 	  // CDN Fallback
 	  if(typeof jQuery == 'undefined') { 
-	    document.write(unescape('%3Cscript src="templates/{$theme}/js/libs/jquery.min.js"%3E%3C/script%3E'));
-	    document.write(unescape('%3Cscript src="templates/{$theme}/js/libs/jquery-ui.min.js"%3E%3C/script%3E'));
+	    document.write(unescape('%3Cscript src="templates/Twinkle/js/latest/jquery.min.js"%3E%3C/script%3E'));
+	    document.write(unescape('%3Cscript src="templates/Twinkle/js/stable/jquery-ui.min.js"%3E%3C/script%3E'));
 	  }
 	</script>
-	<script type="text/javascript" src="templates/{$theme}/js/libs/bootstrap.min.js"></script> 
+	<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+	<script type="text/javascript" src="templates/Twinkle/js/latest/bootstrap.min.js"></script>
+	<script type="text/javascript" src="templates/Twinkle/js/stable/jquery-passy.js"></script> 
+
+	<script type="text/javascript" src="templates/Twinkle/js/twinkle.js"></script> 
 </body>
 </html>
