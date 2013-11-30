@@ -14,24 +14,24 @@ $header
 				<form action="{$linker->getLink(array('section' => 'traffic'))}" method="post" enctype="application/x-www-form-urlencoded">
 					<table class="table table-responsive">
 						<tr>
-							<td>{$lng['traffic']['sumftp']} MB</td>
-							<td>{$lng['traffic']['sumhttp']} MB</td>
-							<td>{$lng['traffic']['summail']} MB</td>
+							<th>{$lng['traffic']['sumftp']} MB</th>
+							<th>{$lng['traffic']['sumhttp']} MB</th>
+							<th>{$lng['traffic']['summail']} MB</th>
 						</tr>
 						<tr>
-							<td><div style="color:#019522;text-align:center">{$traffic_complete['ftp']}</div></td>
-							<td><div style="color:#0000FF;text-align:center">{$traffic_complete['http']}</div></td>
-							<td><div style="color:#800000;text-align:center">{$traffic_complete['mail']}</div></td>
+							<td><div style="color:#019522;">{$traffic_complete['ftp']}</div></td>
+							<td><div style="color:#0000FF;">{$traffic_complete['http']}</div></td>
+							<td><div style="color:#800000;">{$traffic_complete['mail']}</div></td>
 						</tr>
 					</table>
 
 					<table class="table table-responsive" id="datatable">
 						<tr id="datalegend">
-							<td>{$lng['traffic']['day']}</td>
-							<td>{$lng['traffic']['ftp']}</td>
-							<td>{$lng['traffic']['http']}</td>
-							<td>{$lng['traffic']['mail']}</td>
-							<td>{$lng['traffic']['mb']}</td>
+							<th>{$lng['traffic']['day']}</th>
+							<th>{$lng['traffic']['ftp']}</th>
+							<th>{$lng['traffic']['http']}</th>
+							<th>{$lng['traffic']['mail']}</th>
+							<th>{$lng['traffic']['mb']}</th>
 						</tr>
 						$traffic
 					</table>

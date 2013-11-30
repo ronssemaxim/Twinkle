@@ -25,8 +25,10 @@ $header
 								<td><div style="color:#800000;">{$traffic_complete['mail']}</div></td>
 							</tr>
 						</table>
-
-						<table class="table table-responsive" id="datatable">
+					</div>
+					
+					<div class="table-responsive">
+						<table class="table" id="datatable">
 							<tr id="datalegend">
 								<th>{$lng['traffic']['month']}</td>
 								<th>{$lng['traffic']['ftp']}</th>
