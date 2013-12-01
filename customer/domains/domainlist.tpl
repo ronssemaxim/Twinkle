@@ -5,6 +5,10 @@ $header
 				<h2>
 					<a href="#" id="articlehead"></a><span class="icon-globe2"></span>&nbsp;
 					{$lng['domains']['domainsettings']} <small>({$domains_count})</small>
+					
+					<small class="pull-right">
+					<a href="#" id="helpbtn" title="{$lng['menue']['domains']['domains']}" data-html="true" data-toggle="popover" data-placement="bottom" data-original-title="{$lng['menue']['domains']['domains']}" data-content="{$lng['domains']['description']}"><span class="icon-question2"></span></a>
+					</small>
 				</h2>
 			</header>
 		</div>

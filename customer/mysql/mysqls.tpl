@@ -5,6 +5,9 @@ $header
 				<h2>
 					<a href="#" id="articlehead"></a><span class="icon-drawer3"></span>&nbsp;
 					{$lng['menue']['mysql']['databases']} <small>({$mysqls_count})</small>
+					<small class="pull-right">
+						<a href="#" id="helpbtn" title="{$lng['menue']['mysql']['mysql']}" data-html="true" data-toggle="popover" data-placement="bottom" data-original-title="{$lng['menue']['mysql']['mysql']}" data-content="{$lng['mysql']['description']}"><span class="icon-question2"></span></a>
+					</small>
 				</h2>
 			</header>
 		</div>

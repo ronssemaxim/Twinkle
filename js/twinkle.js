@@ -9,6 +9,8 @@
 
 $( document ).ready(function() {
 
+	$('#helpbtn').popover();
+
 	/*
 	** Here we mark the links, which opens a new tab with a little nice earth icon and a title tag :-)
 	*/

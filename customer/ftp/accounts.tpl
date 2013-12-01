@@ -5,6 +5,10 @@ $header
 				<h2>
 					<a href="#" id="articlehead"></a><span class="icon-users2"></span>&nbsp;
 					{$lng['menue']['ftp']['accounts']} <small>({$ftps_count})</small>
+
+					<small class="pull-right">
+						<a href="#" id="helpbtn" title="{$lng['menue']['ftp']['ftp']}" data-html="true" data-toggle="popover" data-placement="bottom" data-original-title="{$lng['menue']['ftp']['ftp']}" data-content="{$lng['ftp']['description']}"><span class="icon-question2"></span></a>
+					</small>
 				</h2>
 			</header>
 		</div>

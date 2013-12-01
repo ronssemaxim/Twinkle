@@ -5,6 +5,9 @@ $header
 				<h2>
 					<a href="#" id="articlehead"></a><span class="icon-cogs"></span>&nbsp;
 					{$lng['menue']['extras']['pathoptions']}
+					<small class="pull-right">
+						<a href="#" id="helpbtn" title="{$lng['menue']['extras']['extras']}" data-html="true" data-toggle="popover" data-placement="bottom" data-original-title="{$lng['menue']['extras']['extras']}" data-content="{$lng['extras']['description']}"><span class="icon-question2"></span></a>
+					</small>
 				</h2>
 			</header>
 		</div>

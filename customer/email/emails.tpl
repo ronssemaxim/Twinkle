@@ -5,6 +5,10 @@ $header
 				<h2>
 					<a href="#" id="articlehead"></a><span class="icon-mail3"></span>&nbsp;
 					{$lng['menue']['email']['emails']} <small>({$emailscount})</small>
+				
+					<small class="pull-right">
+					<a href="#" id="helpbtn" title="{$lng['menue']['email']['email']}" data-html="true" data-toggle="popover" data-placement="bottom" data-original-title="{$lng['menue']['email']['email']}" data-content="{$lng['emails']['description']}"><span class="icon-question2"></span></a>
+					</small>
 				</h2>
 			</header>
 		</div>
