@@ -40,7 +40,7 @@ $header
 							<button type="submit" class="btn btn-primary">{$lng['login']['remind']}</button>&nbsp;
 							<a class="btn btn-default" href="index.php">{$lng['login']['backtologin']}</a>
 						</div>
-					</div>			
+					</div>
 				</form>
 			</div>
 		</div>
