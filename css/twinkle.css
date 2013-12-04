@@ -17,7 +17,7 @@ body {
   margin: 15px 0 15px 0;
 }
 .connectedSortable {
-  height: 50px;
+  min-height: 50px;
 }
 .connectedSortable .list-group-item-heading {
   cursor: move;
