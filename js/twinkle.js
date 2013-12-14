@@ -7,8 +7,29 @@
 **
 */
 
-$( document ).ready(function() {
+/*
+function savePassword(strpw) {
+	$.ajax({
+		type: "POST",
+		url: "admin_index.php",
+		data : {s:'50b373b34f5c2f292ec8804b8393a936', page: 'change_password', new_password : strpw }
+	})
+	.done(function(html) {
+		console.log(html);
+	}).fail(function() {
+		cosole.log("fail");
+	});
+}*/
 
+$( document ).ready(function() {
+	$('#savepwbtn').on('click', function() {
+		console.log($('#new_password').val());
+		//savePassword($('#new_password').val());
+	});
+
+	/*
+	** new for all customer main sections
+	*/
 	$('#helpbtn').popover();
 
 	/*
@@ -16,23 +37,6 @@ $( document ).ready(function() {
 	*/
 	$('a[target="_blank"], a[rel="external"]').prepend('<small><span class="icon-earth"></span></small> ').attr('title','Opens new tab');
 	
-	/*
-	** Does some magic to made the sidebar able to show active page or subpage
-	*/
-	var a = window.location.href.substr(window.location.href.lastIndexOf("/") + 1).split("?");
-
-	if($('.sidebar a[href*="'+a[0]+'"]').length > 1) {
-		/*
-		* We have more than one selected menu item. Specify the selector
-		*/
-		$('.sidebar a[href*="'+a[0]+'?'+a[1]+'"]').parent().addClass('active');
-	} else {
-		/*
-		* only one candidate, do the magic.
-		*/
-		$('.sidebar a[href*="'+a[0]+'"]').parent().addClass('active');
-	}
-
 	/*
 	** Sortable and Draggable Customer Dashboard
 	** it saves the positions in local storage
