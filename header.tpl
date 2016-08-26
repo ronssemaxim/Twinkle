@@ -42,12 +42,6 @@
 	<link href="templates/{$theme}/favicon.ico" rel="icon" type="image/x-icon" />
 	
 	<title><if isset($userinfo['loginname']) && $userinfo['loginname'] != ''>{$userinfo['loginname']} - </if>Froxlor Server Management Panel</title>
-
-	<style type="text/css">
-	body {
-        font-family: <if $settings['panel']['use_webfonts'] == '1'>{$webfont},</if> Verdana, Geneva, sans-serif;
-	}
-	</style>
 </head>
 <body>
 

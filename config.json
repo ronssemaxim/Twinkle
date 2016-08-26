@@ -1,0 +1,13 @@
+{
+  "name": "Twinkle (Bootstrap)",
+  "version": "0.1",
+  "description": "A bootstrapped Froxlor Theme, optimized for mobile devices and desktop systems",
+  "author": "Ingo Eberhardt",
+  "email": "ingo@twinlabs.de",
+  "license": "GPL",
+  "libraries" : {
+    "jQuery" : "http://jquery.com/ ",
+    "jQuery Tablesorter": "https://github.com/Mottie/tablesorter MIT and GPL",
+    "Iconmoon Icons": "http://icomoon.io/#icons Free Version GPL"
+  }
+}

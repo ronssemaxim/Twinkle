@@ -9,6 +9,7 @@
 
 body {
   padding-top: 70px;
+  font-family: Verdana, Geneva, sans-serif;
 }
 .badge-important {
   background-color: #d2322d;
@@ -1480,4 +1481,8 @@ footer .footer-label {
 }
 .icon-IcoMoon:before {
   content: "\e842";
+}
+.Stil1 {
+color: #FF0000;
+font-weight: bold;
 }
