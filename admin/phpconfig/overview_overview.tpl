@@ -1,9 +1,9 @@
 <tr>
-	<td style="vertical-align:top;"><strong>{$row['description']}</strong></td>
-	<td style="vertical-align:top;">{$domains}</td>
-	<td style="vertical-align:top;">{$row['binary']}</td>
-	<td style="vertical-align:top;">{$row['file_extensions']}</td>
-	<td style="vertical-align:top;">
+	<td ><strong>{$row['description']}</strong></td>
+	<td >{$domains}</td>
+	<td >{$row['binary']}</td>
+	<td >{$row['file_extensions']}</td>
+	<td >
 		<a href="{$linker->getLink(array('section' => 'phpsettings', 'page' => $page, 'action' => 'edit', 'id' => $row['id']))}" title="{$lng['panel']['edit']}">
 			<span class="icon-pencil"></span>
 		</a>

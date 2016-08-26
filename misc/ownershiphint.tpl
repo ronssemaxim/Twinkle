@@ -65,16 +65,9 @@
 		</div>
 	</article>
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-
-	<script>
-	  // CDN Fallback
-	  if(typeof jQuery == 'undefined') { 
-	    document.write(unescape('%3Cscript src="templates/Twinkle/js/latest/jquery.min.js"%3E%3C/script%3E'));
-	    document.write(unescape('%3Cscript src="templates/Twinkle/js/stable/jquery-ui.min.js"%3E%3C/script%3E'));
-	  }
-	</script>
+	
+	<script src="templates/{$theme}/js/stable/jquery.min.js"></script>
+	<script src="templates/{$theme}/js/stable/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
 	<script type="text/javascript" src="templates/Twinkle/js/latest/bootstrap.min.js"></script>
 	<script type="text/javascript" src="templates/Twinkle/js/stable/jquery-passy.js"></script> 

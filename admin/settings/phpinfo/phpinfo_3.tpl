@@ -4,7 +4,7 @@
 			<label class="control-label">{$key}</label>
 		</div>
 		<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
-			{$val[0]} <br/> <small style="color: #666">(Master: {$val[1]})</small>
+			{$val[0]} <br/> <small >(Master: {$val[1]})</small>
 		</div>
 	</div>
 </if>

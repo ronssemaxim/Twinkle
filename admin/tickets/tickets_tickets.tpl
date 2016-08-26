@@ -11,30 +11,30 @@
 	<td>{$row['priority']}</td>
 	<td>
 		<if $cananswer < 1 >
-			<a href="{$linker->getLink(array('section' => 'tickets', 'page' => 'tickets', 'action' => 'answer', 'id' => $row['id']))}" style="text-decoration:none;" title="{$lng['ticket']['show']}">
+			<a href="{$linker->getLink(array('section' => 'tickets', 'page' => 'tickets', 'action' => 'answer', 'id' => $row['id']))}"  title="{$lng['ticket']['show']}">
 				<span class="icon-search3"></span>
 			</a>
 		</if>
 		<if 0 < $cananswer >
-			<a href="{$linker->getLink(array('section' => 'tickets', 'page' => 'tickets', 'action' => 'answer', 'id' => $row['id']))}" style="text-decoration:none;" title="{$lng['ticket']['answer']}">
+			<a href="{$linker->getLink(array('section' => 'tickets', 'page' => 'tickets', 'action' => 'answer', 'id' => $row['id']))}"  title="{$lng['ticket']['answer']}">
 				<span class="icon-bubble2"></span>
 			</a>
 		</if>
 		
 		<if $reopen < 1 >
-			&nbsp;<a href="{$linker->getLink(array('section' => 'tickets', 'page' => 'tickets', 'action' => 'close', 'id' => $row['id']))}" style="text-decoration:none;" title="{$lng['ticket']['close']}">
+			&nbsp;<a href="{$linker->getLink(array('section' => 'tickets', 'page' => 'tickets', 'action' => 'close', 'id' => $row['id']))}"  title="{$lng['ticket']['close']}">
 				<span class="icon-lock3"></span>
 			</a>
 		</if>
 		<if 0 < $reopen >
-			&nbsp;<a href="{$linker->getLink(array('section' => 'tickets', 'page' => 'tickets', 'action' => 'reopen', 'id' => $row['id']))}" style="text-decoration:none;" title="{$lng['ticket']['reopen']}">
+			&nbsp;<a href="{$linker->getLink(array('section' => 'tickets', 'page' => 'tickets', 'action' => 'reopen', 'id' => $row['id']))}"  title="{$lng['ticket']['reopen']}">
 				<span class="icon-unlocked"></span>
 			</a>
 		</if>
-		&nbsp;<a href="{$linker->getLink(array('section' => 'tickets', 'page' => 'tickets', 'action' => 'archive', 'id' => $row['id']))}" style="text-decoration:none;" title="{$lng['ticket']['archive']}">
+		&nbsp;<a href="{$linker->getLink(array('section' => 'tickets', 'page' => 'tickets', 'action' => 'archive', 'id' => $row['id']))}"  title="{$lng['ticket']['archive']}">
 			<span class="icon-folder-open"></span>
 		</a>
-		&nbsp;<a href="{$linker->getLink(array('section' => 'tickets', 'page' => 'tickets', 'action' => 'delete', 'id' => $row['id']))}" style="text-decoration:none;" title="{$lng['panel']['delete']}">
+		&nbsp;<a href="{$linker->getLink(array('section' => 'tickets', 'page' => 'tickets', 'action' => 'delete', 'id' => $row['id']))}"  title="{$lng['panel']['delete']}">
 			<span class="icon-remove"></span>
 		</a>
 	</td>

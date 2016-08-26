@@ -39,7 +39,7 @@ $header
 							<tfoot>
 								<tr>
 									<td>&nbsp;</td>
-									<td style="text-align:left;">
+									<td >
 										<input type="submit" class="btn btn-primary btn-success" value="{$lng['menue']['main']['changetheme']}" />
 									</td>
 								</tr>

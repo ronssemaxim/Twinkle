@@ -20,16 +20,16 @@
 				<if $row['diskspace'] != 'UL'>
 					<if (($row['diskspace']/100)*(int)$settings['system']['report_webmax']) < $row['diskspace_used']>
 						<div class="progress progress-danger">
-							<div class="bar" style="width: {$disk_percent}%"></div>
+							<div class="bar" ></div>
 						</div>
 					<else>
 						<div class="progress">
-							<div class="bar" style="width: {$disk_percent}%"></div>
+							<div class="bar" ></div>
 						</div>
 					</if>
 				<else>
 					<div class="progress text-center">∞
-							<div class="bar" style="width: 0%"></div>
+							<div class="bar" ></div>
 					</div>
 				</if>
 			</span>
@@ -38,26 +38,26 @@
 				<if $row['traffic'] != 'UL'>
 					<if (($row['traffic']/100)*(int)$settings['system']['report_trafficmax']) < $row['traffic_used']>
 						<div class="progress progress-danger">
-							<div class="bar" style="width: {$traffic_percent}%"></div>
+							<div class="bar" ></div>
 						</div>
 					<else>
 						<div class="progress">
-							<div class="bar" style="width: {$traffic_percent}%"></div>
+							<div class="bar" ></div>
 						</div>
 					</if>
 				<else>
 					<div class="progress text-center">∞
-						<div class="bar" style="width: 0%"></div>
+						<div class="bar" ></div>
 					</div>
 				</if>
 			</span>
 		</div>
 	</td>
 	<td>
-		<a href="{$linker->getLink(array('section' => 'admins', 'page' => $page, 'action' => 'edit', 'id' => $row['adminid']))}" style="text-decoration:none;" title="{$lng['panel']['edit']}">
+		<a href="{$linker->getLink(array('section' => 'admins', 'page' => $page, 'action' => 'edit', 'id' => $row['adminid']))}"  title="{$lng['panel']['edit']}">
 			<span class="icon-pencil"></span>
 		</a>&nbsp;
-		<a href="{$linker->getLink(array('section' => 'admins', 'page' => $page, 'action' => 'delete', 'id' => $row['adminid']))}" style="text-decoration:none;" title="{$lng['panel']['delete']}">
+		<a href="{$linker->getLink(array('section' => 'admins', 'page' => $page, 'action' => 'delete', 'id' => $row['adminid']))}"  title="{$lng['panel']['delete']}">
 			<span class="icon-remove"></span>
 		</a>
 	</td>

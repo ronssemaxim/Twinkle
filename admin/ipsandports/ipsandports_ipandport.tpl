@@ -8,10 +8,10 @@
 	<td><if $row['vhostcontainer_servername_statement']=='1'>{$lng['panel']['yes']}<else>{$lng['panel']['no']}</if></td>
 	<td><if $row['ssl']=='1'>{$lng['panel']['yes']}<else>{$lng['panel']['no']}</if></td>
 	<td>
-		<a href="{$linker->getLink(array('section' => 'ipsandports', 'page' => $page, 'action' => 'edit', 'id' => $row['id']))}" style="text-decoration:none;" title="{$lng['panel']['edit']}">
+		<a href="{$linker->getLink(array('section' => 'ipsandports', 'page' => $page, 'action' => 'edit', 'id' => $row['id']))}"  title="{$lng['panel']['edit']}">
 			<span class="icon-pencil"></span>
 		</a>&nbsp;
-		<a href="{$linker->getLink(array('section' => 'ipsandports', 'page' => $page, 'action' => 'delete', 'id' => $row['id']))}" style="text-decoration:none;" title="{$lng['panel']['delete']}">
+		<a href="{$linker->getLink(array('section' => 'ipsandports', 'page' => $page, 'action' => 'delete', 'id' => $row['id']))}"  title="{$lng['panel']['delete']}">
 			<span class="icon-remove"></span>
 		</a>
 	</td>

@@ -20,9 +20,9 @@ $header
 								<th>{$lng['traffic']['summail']} GB</th>
 							</tr>
 							<tr>
-								<td><div style="color:#019522;">{$traffic_complete['ftp']}</div></td>
-								<td><div style="color:#0000FF;">{$traffic_complete['http']}</div></td>
-								<td><div style="color:#800000;">{$traffic_complete['mail']}</div></td>
+								<td><div >{$traffic_complete['ftp']}</div></td>
+								<td><div >{$traffic_complete['http']}</div></td>
+								<td><div >{$traffic_complete['mail']}</div></td>
 							</tr>
 						</table>
 					</div>
@@ -45,7 +45,7 @@ $header
 		</div>
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
-				<div id="chartdiv" style="height:300px;width:100%"></div>
+				<div id="chartdiv" ></div>
 			</div>
 		</div>
 	</article>

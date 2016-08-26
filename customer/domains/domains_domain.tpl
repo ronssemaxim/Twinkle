@@ -6,17 +6,17 @@
 	</td>
 	<td>
 		<if $row['caneditdomain'] == '1'>
-			<a href="{$linker->getLink(array('section' => 'domains', 'page' => 'domains', 'action' => 'edit', 'id' => $row['id']))}" style="text-decoration:none;" title="{$lng['panel']['edit']}">
+			<a href="{$linker->getLink(array('section' => 'domains', 'page' => 'domains', 'action' => 'edit', 'id' => $row['id']))}"  title="{$lng['panel']['edit']}">
 				<span class="icon-pencil"></span>
 			</a>&nbsp;
 		</if>
 		<if $row['parentdomainid'] != '0' && !(isset($row['domainaliasid']) && $row['domainaliasid'] != 0)>
-			<a href="{$linker->getLink(array('section' => 'domains', 'page' => 'domains', 'action' => 'delete', 'id' => $row['id']))}" style="text-decoration:none;" title="{$lng['panel']['delete']}">
+			<a href="{$linker->getLink(array('section' => 'domains', 'page' => 'domains', 'action' => 'delete', 'id' => $row['id']))}"  title="{$lng['panel']['delete']}">
 				<span class="icon-remove"></span>
 			</a>&nbsp;
 		</if>
 		<if $show_ssledit == 1>
-			<a href="{$linker->getLink(array('section' => 'domains', 'page' => 'domainssleditor', 'action' => 'view', 'id' => $row['id']))}" style="text-decoration:none;">
+			<a href="{$linker->getLink(array('section' => 'domains', 'page' => 'domainssleditor', 'action' => 'view', 'id' => $row['id']))}" >
 				<img src="templates/{$theme}/assets/img/icons/ssl_<if $row['domain_hascert'] == 1>customer</if><if $row['domain_hascert'] == 2>shared</if><if $row['domain_hascert'] == 0>global</if>.png" alt="{$lng['panel']['ssleditor']}" />
 			</a>&nbsp;
 		</if>

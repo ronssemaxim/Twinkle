@@ -28,16 +28,16 @@
 				<if $row['diskspace'] != 'UL'>
 					<if (($row['diskspace']/100)*(int)$settings['system']['report_webmax']) < $row['diskspace_used']>
 						<div class="progress">
-							<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{$disk_percent}" aria-valuemin="0" aria-valuemax="100" style="width: 60%;" title="{$disk_percent}%"></div>
+							<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{$disk_percent}" aria-valuemin="0" aria-valuemax="100"  title="{$disk_percent}%"></div>
 						</div>
 					<else>
 						<div class="progress">
-							<div class="progress-bar" role="progressbar" aria-valuenow="{$disk_percent}" aria-valuemin="0" aria-valuemax="100" style="width: 60%;" title="{$disk_percent}%"></div>
+							<div class="progress-bar" role="progressbar" aria-valuenow="{$disk_percent}" aria-valuemin="0" aria-valuemax="100"  title="{$disk_percent}%"></div>
 						</div>
 					</if>
 				<else>
 					<div class="progress text-center">∞
-						<div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 60%;" title="unlimited"></div>
+						<div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"  title="unlimited"></div>
 					</div>
 				</if>
 			</div>
@@ -47,22 +47,22 @@
 				<if $row['traffic'] != 'UL'>
 					<if (($row['traffic']/100)*(int)$settings['system']['report_trafficmax']) < $row['traffic_used']>
 						<div class="progress progress-danger">
-							<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{$traffic_percent}" aria-valuemin="0" aria-valuemax="100" style="width: 60%;" title="{$traffic_percent}%"></div>
+							<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{$traffic_percent}" aria-valuemin="0" aria-valuemax="100"  title="{$traffic_percent}%"></div>
 						</div>
 					<else>
 						<div class="progress">
-							<div class="progress-bar" role="progressbar" aria-valuenow="{$traffic_percent}" aria-valuemin="0" aria-valuemax="100" style="width: 60%;" title="{$traffic_percent}"></div>
+							<div class="progress-bar" role="progressbar" aria-valuenow="{$traffic_percent}" aria-valuemin="0" aria-valuemax="100"  title="{$traffic_percent}"></div>
 						</div>
 					</if>
 				<else>
 					<div class="progress text-center">∞
-						<div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 60%;" title="unlimited"></div>
+						<div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"  title="unlimited"></div>
 					</div>
 				</if>
 			</div>
 		</div>
 	</td>
-	<td style="white-space: nowrap;">
+	<td >
 		<a href="{$linker->getLink(array('section' => 'customers', 'page' => $page, 'action' => 'edit', 'id' => $row['customerid']))}" title="{$lng['panel']['edit']}">
 			<span class="icon-pencil"></span>
 		</a>&nbsp;

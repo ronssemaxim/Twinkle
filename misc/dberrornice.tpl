@@ -53,7 +53,7 @@
 				<div class="alert alert-danger fade in">
 					<h4><span class="icon-error"></span> A database error occured</h4>
 					<p><TEXT></p>
-					<p><pre style="overflow:auto;"><DEBUG></pre></p>
+					<p><pre ><DEBUG></pre></p>
 					<p>
 						<a href="#" title="Click here to go back" id="historyback" class="btn btn-link">Go back</a>&nbsp;
 						<a href="<LINK>" title="Click here to send error report" class="btn btn-danger">Send Error Report</a>
@@ -62,17 +62,9 @@
 			</div>
 		</div>
 	</article>
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-
-	<script>
-	  // CDN Fallback
-	  if(typeof jQuery == 'undefined') { 
-	    document.write(unescape('%3Cscript src="templates/Twinkle/js/latest/jquery.min.js"%3E%3C/script%3E'));
-	    document.write(unescape('%3Cscript src="templates/Twinkle/js/stable/jquery-ui.min.js"%3E%3C/script%3E'));
-	  }
-	</script>
+	
+	<script src="templates/{$theme}/js/stable/jquery.min.js"></script>
+	<script src="templates/{$theme}/js/stable/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
 	<script type="text/javascript" src="templates/Twinkle/js/latest/bootstrap.min.js"></script>
 	<script type="text/javascript" src="templates/Twinkle/js/stable/jquery-passy.js"></script> 

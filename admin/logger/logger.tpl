@@ -36,7 +36,7 @@ $header
 								<th>{$lng['logger']['date']}&nbsp;{$arrowcode['date']}</th>
 								<th>{$lng['logger']['type']}&nbsp;{$arrowcode['type']}</th>
 								<th>{$lng['logger']['user']}&nbsp;{$arrowcode['user']}</th>
-								<th style="width: 60%;">{$lng['logger']['action']}</th>
+								<th >{$lng['logger']['action']}</th>
 							</tr>
 						</thead>
 						<tbody>

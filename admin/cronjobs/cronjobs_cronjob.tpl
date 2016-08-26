@@ -4,7 +4,7 @@
 	<td>{$row['interval']}</td>
 	<td>{$row['isactive']}</td>
 	<td>
-		<a href="{$linker->getLink(array('section' => 'cronjobs', 'page' => $page, 'action' => 'edit', 'id' => $row['id']))}" style="text-decoration:none;" title="{$lng['panel']['edit']}">
+		<a href="{$linker->getLink(array('section' => 'cronjobs', 'page' => $page, 'action' => 'edit', 'id' => $row['id']))}"  title="{$lng['panel']['edit']}">
 			<span class="icon-pencil"></span>
 		</a>
 	</td>
