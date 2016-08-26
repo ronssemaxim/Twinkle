@@ -176,21 +176,21 @@ $header
 							{$lng['customer']['forwarders']}
 						</li>
 
-						<if $settings['system']['mail_quota_enabled'] == 1>
+						<if Settings::Get('system.mail_quota_enabled') == 1>
 							<li class="list-group-item">
 								<span class="badge" title="{$lng['admin']['used']} ({$lng['admin']['assignedmax']})">{$overview['email_quota_used']} ({$userinfo['email_quota_used']}/{$userinfo['email_quota']})</span>
 								{$lng['customer']['email_quota']}
 							</li>
 						</if>
 
-						<if $settings['autoresponder']['autoresponder_active'] == 1>
+						<if Settings::Get('autoresponder.autoresponder_active') == 1>
 							<li class="list-group-item">
 								<span class="badge" title="{$lng['admin']['used']} ({$lng['admin']['assignedmax']})">{$userinfo['email_autoresponder_used']} ({$userinfo['email_autoresponder']})</span>
 								{$lng['customer']['autoresponder']}
 							</li>
 						</if>
 
-						<if $settings['ticket']['enabled'] == 1>
+						<if Settings::Get('ticket.enabled') == 1>
 							<li class="list-group-item">
 								<span class="badge" title="{$lng['admin']['used']} ({$lng['admin']['assignedmax']})">{$userinfo['email_autoresponder_used']} ({$userinfo['email_autoresponder']})</span>
 								{$lng['customer']['autoresponder']}

@@ -3,20 +3,17 @@
   "version": "0.2",
   "description": "A bootstrapped Froxlor Theme, optimized for mobile devices and desktop systems. Fixed for the new Froxlor",
   "email": "ingo@twinlabs.de",
-  "license": "GPL",
-}
-{  
-   "variants":{  
-      "twinkle":{  
-         "css":[  
-            "twinkle.css"
-         ],
-         "js":[  
-            "twinkle.js"
-         ],
-         "description":"Twinkle2"
-      }
-   },
-  "author": "Ronsse Maxim",
-   "author":"Roman Schmerold"
+  "license": "GPL",  
+  "variants":{  
+     "default":{  
+        "css":[  
+           "twinkle.css"
+        ],
+        "js":[  
+           "twinkle.js"
+        ],
+        "description":"Twinkle2"
+     }
+  },
+  "author": "Ronsse Maxim"
 }

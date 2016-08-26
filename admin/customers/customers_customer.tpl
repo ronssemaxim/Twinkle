@@ -26,7 +26,7 @@
 			<div class="col-md-12 col-sm-12 col-lg-12">
 				<span>Webspace:</span>
 				<if $row['diskspace'] != 'UL'>
-					<if (($row['diskspace']/100)*(int)$settings['system']['report_webmax']) < $row['diskspace_used']>
+					<if (($row['diskspace']/100)*(int)Settings::Get('system.report_webmax')) < $row['diskspace_used']>
 						<div class="progress">
 							<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{$disk_percent}" aria-valuemin="0" aria-valuemax="100"  title="{$disk_percent}%"></div>
 						</div>
@@ -45,7 +45,7 @@
 			<div class="col-md-12 col-sm-12 col-lg-12">
 				<span>Traffic:</span>
 				<if $row['traffic'] != 'UL'>
-					<if (($row['traffic']/100)*(int)$settings['system']['report_trafficmax']) < $row['traffic_used']>
+					<if (($row['traffic']/100)*(int)Settings::Get('system.report_trafficmax')) < $row['traffic_used']>
 						<div class="progress progress-danger">
 							<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{$traffic_percent}" aria-valuemin="0" aria-valuemax="100"  title="{$traffic_percent}%"></div>
 						</div>

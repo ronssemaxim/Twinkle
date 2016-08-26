@@ -62,7 +62,7 @@ $header
 					</div>
 					<div class="form-group">
 						<div class="col-xs-7 col-sm-9 col-md-9 col-lg-9 col-sm-offset-3 col-md-offset-3 col-lg-offset-3">
-							<if $settings['panel']['allow_preset'] == '1'>
+							<if Settings::Get('panel.allow_preset') == '1'>
 								<a href="$filename?action=forgotpwd">{$lng['login']['forgotpwd']}</a>
 							<else>
 								&nbsp;

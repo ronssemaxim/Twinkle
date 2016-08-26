@@ -28,13 +28,13 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="Default-Style" content="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<if $settings['panel']['no_robots'] == '0'>
+	<if Settings::Get('panel.no_robots') == '0'>
 		<meta name="robots" content="noindex, nofollow, noarchive" />
 		<meta name="GOOGLEBOT" content="nosnippet" />
 	</if>
 
-	<if $settings['panel']['use_webfonts'] == '1'>
-		<link href="//fonts.googleapis.com/css?family={$settings['panel']['webfont']}" rel="stylesheet">
+	<if Settings::Get('panel.use_webfonts') == '1'>
+		<link href="//fonts.googleapis.com/css?family=Settings::Get('panel.webfont')}" rel="stylesheet">
 	</if>
 	<link rel="stylesheet" href="templates/{$theme}/css/latest/bootstrap.min.css" type="text/css" media="all">
 	<link rel="stylesheet" href="templates/{$theme}/css/twinkle.css" type="text/css" media="all" />
@@ -65,7 +65,7 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<if $settings['ticket']['enabled'] == 1>
+						<if Settings::Get('ticket.enabled') == 1>
 							<li>
 								<a href="{$linker->getLink(array('section' => 'tickets', 'page' => 'tickets'))}">
 									<span class="icon-envelop" alt="{$lng['menue']['ticket']['ticket']}" /></span> 
@@ -85,13 +85,13 @@
 								<!-- LANGUAGE -->	
 								<li><a href="{$linker->getLink(array('section' => 'index', 'page' => 'change_language'))}"><span class="icon-flag"></span> {$lng['login']['language']}</a></li>
 
-								<if $settings['panel']['allow_theme_change_admin'] == '1' && $userinfo['adminsession'] == 1>
+								<if Settings::Get('panel.allow_theme_change_admin') == '1' && $userinfo['adminsession'] == 1>
 									<!-- THEME -->
 									<li>
 										<a href="{$linker->getLink(array('section' => 'index', 'page' => 'change_theme'))}"><span class="icon-insert-template"></span> {$lng['panel']['theme']}</a>
 									</li>
 								</if>
-								<if $settings['panel']['allow_theme_change_customer'] == '1' && $userinfo['adminsession'] == 0>
+								<if Settings::Get('panel.allow_theme_change_customer') == '1' && $userinfo['adminsession'] == 0>
 									<!-- THEME -->
 									<li>
 										<a href="{$linker->getLink(array('section' => 'index', 'page' => 'change_theme'))}"><span class="icon-insert-template"></span> {$lng['panel']['theme']}</a>

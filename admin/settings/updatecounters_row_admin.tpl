@@ -94,7 +94,7 @@
 	{$lng['customer']['forwarders']}
 </li>
 
-<if $settings['system']['mail_quota_enabled'] == 1>
+<if Settings::Get('system.mail_quota_enabled') == 1>
 	<li class="list-group-item">
 		<if $admin['email_quota_used'] == $admin['email_quota_used_new']>
 			<span class="badge">{$admin['email_quota_used']} -&gt; {$admin['email_quota_used_new']}</span>
@@ -105,7 +105,7 @@
 	</li>
 </if>
 
-<if $settings['autoresponder']['autoresponder_active'] == 1>
+<if Settings::Get('autoresponder.autoresponder_active') == 1>
 	<li class="list-group-item">
 		<if $admin['email_autoresponder_used'] == $admin['email_autoresponder_used_new']>
 			<span class="badge">{$admin['email_autoresponder_used']} -&gt; {$admin['email_autoresponder_used_new']}</span>
@@ -125,7 +125,7 @@
 	{$lng['customer']['ftps']}
 </li>
 
-<if $settings['ticket']['enabled'] == '1'>
+<if Settings::Get('ticket.enabled') == '1'>
 	<li class="list-group-item">
 		<if $admin['tickets_used'] == $admin['tickets_used_new']>
 			<span class="badge">{$admin['tickets_used']} -&gt; {$admin['tickets_used_new']}</span>

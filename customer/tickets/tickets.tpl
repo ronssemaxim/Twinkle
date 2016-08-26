@@ -29,7 +29,7 @@ $header
 
 		<div class="row middle">
 			<div class="col-sm-3 col-md-3 col-lg-3">
-				<if ($userinfo['tickets_used'] < $userinfo['tickets'] || $userinfo['tickets'] == '-1') && ($ticketsopen < $settings['ticket']['concurrently_open'] || ($settings['ticket']['concurrently_open'] == '-1' || $settings['ticket']['concurrently_open'] == '')) >
+				<if ($userinfo['tickets_used'] < $userinfo['tickets'] || $userinfo['tickets'] == '-1') && ($ticketsopen < Settings::Get('ticket.concurrently_open') || (Settings::Get('ticket.concurrently_open') == '-1' || Settings::Get('ticket.concurrently_open') == '')) >
 					<a href="{$linker->getLink(array('section' => 'tickets', 'page' => 'tickets', 'action' => 'new'))}" class="btn btn-link"><span class="icon-plus"></span> {$lng['ticket']['ticket_new']}</a>
 				</if>
 			</div>
@@ -78,7 +78,7 @@ $header
 
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
-				<if ($userinfo['tickets_used'] < $userinfo['tickets'] || $userinfo['tickets'] == '-1') && 15 < $tickets_count && ($ticketsopen < $settings['ticket']['concurrently_open'] || ($settings['ticket']['concurrently_open'] == '-1' || $settings['ticket']['concurrently_open'] == '')) >
+				<if ($userinfo['tickets_used'] < $userinfo['tickets'] || $userinfo['tickets'] == '-1') && 15 < $tickets_count && ($ticketsopen < Settings::Get('ticket.concurrently_open') || (Settings::Get('ticket.concurrently_open') == '-1' || Settings::Get('ticket.concurrently_open') == '')) >
 					<a href="{$linker->getLink(array('section' => 'tickets', 'page' => 'tickets', 'action' => 'new'))}" class="btn btn-link"><span class="icon-plus"></span> {$lng['ticket']['ticket_new']}</a>
 				</if>
 			</div>
