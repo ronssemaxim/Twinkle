@@ -1,1 +1,1 @@
-	<li class="$active">{$completeLink}</li>
+	<li class="$active"><a href="{$navurl}" {$target} class="menu {$active}">{$navlabel}</a></li>
