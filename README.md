@@ -43,12 +43,12 @@ Installation
 Just clone Twinkle directly to your Froxlor template folder. Then change theme in Froxlor under Options -> Change Theme.
 
     # cd /path/to/your/froxlor/templates
-    # git clone https://github.com/ronssemaxim/Twinkle.git
+    # git clone https://github.com/ronssemaxim/Twinkle2.git
 
 Update
 ------
 
-    # cd /path/to/your/froxlor/templates/Twinkle
+    # cd /path/to/your/froxlor/templates/Twinkle2
     # git pull
 
 LESS
