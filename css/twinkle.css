@@ -54,8 +54,11 @@ a#helpbtn {
 }
 section nav ul {
   background-color: #f7f5fa;
+  list-style-type: none;
+  padding: 0;
 }
 section nav ul li a {
+  display: block;
   color: #716b7a;
   padding: 5px 15px !important;
 }
