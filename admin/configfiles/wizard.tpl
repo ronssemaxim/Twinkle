@@ -22,7 +22,7 @@ $header
 						<div class="col-xs-12 col-sm-12 col-md-9 col-lg-7">
 							<if $distribution != ''>
 								<input type="hidden" name="distribution" value="$distribution"/>
-								<a href="{$linker->getLink(array('section' => 'configfiles', 'page' => $page))}">{$configfiles[$distribution]['label']} <span class="icon-checkmark"></span></a>
+								<a href="{$linker->getLink(array('section' => 'configfiles', 'page' => $page))}">{$dist_display} <span class="icon-checkmark"></span></a>
 							<else>
 								<select class="form-control" id="config_distribution" name="distribution">
 									<option value="choose">{$lng['admin']['configfiles']['choosedistribution']}</option>
@@ -39,7 +39,7 @@ $header
 						<div class="col-xs-12 col-sm-12 col-md-9 col-lg-7">
 							<if $service != ''>
 								<input type="hidden" name="service" value="$service"/>
-								<a href="{$linker->getLink(array('section' => 'configfiles', 'page' => $page, 'distribution' => $distribution))}">{$configfiles[$distribution]['services'][$service]['label']} <span class="icon-checkmark"></span></a> <small><span class="icon-point-left"></span> Click again to change the service or go ahead</small>
+								<a href="{$linker->getLink(array('section' => 'configfiles', 'page' => $page, 'distribution' => $distribution))}">{$services[$service]->title} <span class="icon-checkmark"></span></a> <small><span class="icon-point-left"></span> Click again to change the service or go ahead</small>
 							<else>
 								<select class="form-control" id="config_service" name="service">
 									<option value="choose">{$lng['admin']['configfiles']['chooseservice']}</option>

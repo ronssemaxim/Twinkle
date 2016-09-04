@@ -183,20 +183,6 @@ $header
 							</li>
 						</if>
 
-						<if Settings::Get('autoresponder.autoresponder_active') == 1>
-							<li class="list-group-item">
-								<span class="badge" title="{$lng['admin']['used']} ({$lng['admin']['assignedmax']})">{$userinfo['email_autoresponder_used']} ({$userinfo['email_autoresponder']})</span>
-								{$lng['customer']['autoresponder']}
-							</li>
-						</if>
-
-						<if Settings::Get('ticket.enabled') == 1>
-							<li class="list-group-item">
-								<span class="badge" title="{$lng['admin']['used']} ({$lng['admin']['assignedmax']})">{$userinfo['email_autoresponder_used']} ({$userinfo['email_autoresponder']})</span>
-								{$lng['customer']['autoresponder']}
-							</li>
-						</if>
-
 						<li class="list-group-item">
 							<span class="badge" title="{$lng['admin']['used']} ({$lng['admin']['assignedmax']})">{$overview['tickets_used']} ({$userinfo['tickets_used']}/{$userinfo['tickets']})</span>
 							{$lng['customer']['tickets']}

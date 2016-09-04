@@ -4,7 +4,7 @@ $header
 			<header class="col-sm-12 col-md-12 col-lg-12">
 				<h2>
 					<a href="#" id="articlehead"></a><span class="icon-cog"></span>&nbsp;
-					{$configfiles[$distribution]['label']}
+					{$dist_display}
 					<small>
 						[<a href="{$linker->getLink(array('section' => 'configfiles', 'page' => $page, 'distribution' => $distribution, 'service' => $service))}">{$lng['panel']['back']}</a>]
 					</small>
@@ -15,9 +15,9 @@ $header
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
 				<ol class="breadcrumb">
-				  <li>{$configfiles[$distribution]['label']}</li>
-				  <li>{$configfiles[$distribution]['services'][$service]['label']}</li>
-				  <li class="active">{$configfiles[$distribution]['services'][$service]['daemons'][$daemon]['label']}</li>
+				  <li>{$dist_display}</li>
+				  <li>{$services[$service]->title}</li>
+				  <li class="active">{$daemons[$daemon]->title}</li>
 				</ol>
 			</div>
 		</div>
@@ -25,13 +25,6 @@ $header
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
 					{$configpage}
-					<if $restart != ''>
-						<div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<h4>{$lng['admin']['configfiles']['restart']}</h4>
-								<textarea class="form-control" rows="3" cols="70" readonly="readonly">$restart</textarea></td>
-							</h4>
-						</div>
-					</if>
 			</div>
 		</div>
 	</article>

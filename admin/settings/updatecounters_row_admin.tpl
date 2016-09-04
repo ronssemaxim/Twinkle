@@ -105,17 +105,6 @@
 	</li>
 </if>
 
-<if Settings::Get('autoresponder.autoresponder_active') == 1>
-	<li class="list-group-item">
-		<if $admin['email_autoresponder_used'] == $admin['email_autoresponder_used_new']>
-			<span class="badge">{$admin['email_autoresponder_used']} -&gt; {$admin['email_autoresponder_used_new']}</span>
-		<else>
-			<span class="badge iportant">{$admin['email_autoresponder_used']} -&gt; {$admin['email_autoresponder_used_new']}</span>
-		</if>
-		{$lng['customer']['autoresponder']}
-	</li>
-</if>
-
 <li class="list-group-item">
 	<if $admin['ftps_used'] == $admin['ftps_used_new']>
 		<span class="badge">{$admin['ftps_used']} -&gt; {$admin['ftps_used_new']}</span>
