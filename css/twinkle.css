@@ -1489,3 +1489,8 @@ footer .footer-label {
 color: #FF0000;
 font-weight: bold;
 }
+
+/* disable resize for config file textareas */
+textarea.filecontent, textarea.shell {
+  resize: none;
+}

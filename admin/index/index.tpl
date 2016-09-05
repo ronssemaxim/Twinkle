@@ -62,7 +62,7 @@ $header
 
 			<div id="col2" class="connectedSortable col-xs-12 col-sm-12 col-md-6 col-lg-6">
 				<div id="item_4">
-					<ul class="list-group" id="newsfeeditems">
+					<ul class="list-group">
 						<li class="list-group-item">
 							<h4 class="list-group-item-heading">
 								<span class="icon-bullhorn"></span> Froxlor News
@@ -71,6 +71,7 @@ $header
 								</div>
 							</h4>
 						</li>
+						<li class="list-group-item" id="newsfeeditems"><span class="text-muted small">Loading...</span></li>
 					</ul>
 				</div>
 				

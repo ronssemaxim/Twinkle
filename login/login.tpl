@@ -3,9 +3,12 @@ $header
 
 		<div class="row">
 			<header class="col-xs-12 col-sm-10 col-md-8 col-lg-5 col-sm-offset-1 col-md-offset-2 col-lg-offset-3 text-center">
-				<p>
-					<img src="{$header_logo}" alt="Froxlor Server Management Panel" />
-				</p>
+				<if (Settings::Get('admin.show_version_login') == '1' && $filename == 'index.php') || ($filename != 'index.php' && Settings::Get('admin.show_version_footer') == '1')>
+					<p>
+						<img src="{$header_logo}" alt="Froxlor Server Management Panel" />
+					</p>
+				<else>
+				</if>
 
 				<if $update_in_progress !== ''>
 					<div class="alert alert-danger text-left">

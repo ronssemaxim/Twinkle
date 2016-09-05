@@ -223,28 +223,33 @@ $( document ).ready(function() {
 		url: "lib/ajax.php?action=newsfeed"
 	})
 	.done(function(html) {
-		$('#newsfeeditems').append(html);
+		$('#newsfeeditems').html(html);
 		
-		$('.newsitem').each(function() {
+		$('div.newsfeed-body').each(function() {
 			// process old froxlor news feed markup 
-			var newstitle = $(this).find('b').html(),
+			var newstitle = $(this).find('strong').html(),
 				newslink = $(this).find('a').attr('href');
 			
-			$(this).find('b').remove();
+			$(this).find('strong').remove();
 			$(this).find('br').remove();
 
-			var newstext = $(this).find('a').html();
-			$(this).remove();
-			var listitem  = '<li class="list-group-item" id="newsitem">';
-				listitem += '<h5 class="list-group-item-heading"><a href="'+newslink+'" target="_blank">'+newstitle+'</a></h5>';
+			var newstext = $(this).find('p').html().trim();
+			$(this).parent().remove();
+			console.log(newstitle);
+			console.log(newslink);
+			console.log(newstext);
+			var listitem  = '<li class="list-group-item small" id="newsitem">';
+				listitem += '<h5 class="list-group-item-heading small"><a href="'+newslink+'" target="_blank">'+newstitle+'</a></h5>';
 				listitem += newstext;
 				listitem += '</li>';
-			$('#newsfeeditems').append(listitem);
+
+			$('#newsfeeditems').parent().append(listitem);// append to parent since newsfeeditems is the li with the Loading text
 		});
 		$('[id^=newsitem]').hide();
 	}).fail(function() {
-		var erroritem = '<li class="list-group-item"><small>Newsfeed Error</small></li>';
-		$('#newsfeeditems').append(erroritem);
+		$('#newsfeeditems').parent().append('<li class="list-group-item"><small>Newsfeed Error</small></li>');
+	}).always(function() {
+		$('#newsfeeditems').slideUp(400, function() { $(this).remove(); }); // remove loading text
 	});
 
 	var newsshown = false;
@@ -343,6 +348,24 @@ $( document ).ready(function() {
 	$('#config_daemon').change(function (){
 		window.location.href=window.location.href + '&daemon=' + this.options[ this.selectedIndex ].value;
 	});
+	// update mysql password on submit
+	var configfileTextareas = $("textarea.filecontent, textarea.shell");
+	var lastPw = "MYSQL_PASSWORD";
+	$("#configfiles_setmysqlpw").submit(function(event) {
+		event.preventDefault();
+		var inputVal = $("#configfiles_mysqlpw").val();
+		if (!inputVal.trim()) {
+			inputVal = "MYSQL_PASSWORD";
+		}
+		configfileTextareas.each(function() {
+			this.value = this.value.replace(lastPw, inputVal);
+		});
+		lastPw = inputVal;
+		$('#configfiles_setmysqlpw .has-warning').removeClass('has-warning').addClass('has-success');
+	});
+	$("textarea.filecontent, textarea.shell").on("click", function () {
+   $(this).select();
+});
 
 	/*
 	** Special Logfile YesNoSure Dialog
